@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="k" format="2">
+  <advance width="467"/>
+  <unicode hex="006B"/>
+  <outline>
+    <contour>
+      <point x="307" y="120" type="line"/>
+      <point x="307" y="0" type="line"/>
+      <point x="447" y="0" type="line"/>
+      <point x="447" y="120" type="line"/>
+    </contour>
+    <contour>
+      <point x="40" y="750" type="line"/>
+      <point x="40" y="0" type="line"/>
+      <point x="180" y="0" type="line"/>
+      <point x="180" y="750" type="line"/>
+    </contour>
+    <contour>
+      <point x="180" y="355" type="line"/>
+      <point x="180" y="215" type="line"/>
+      <point x="241" y="215" type="line"/>
+      <point x="241" y="355" type="line"/>
+    </contour>
+    <contour>
+      <point x="281" y="485" type="line"/>
+      <point x="421" y="485" type="line"/>
+      <point x="421" y="605" type="line"/>
+      <point x="281" y="605" type="line"/>
+    </contour>
+    <contour>
+      <point x="154" y="250" type="line"/>
+      <point x="215" y="250" type="line"/>
+      <point x="215" y="390" type="line"/>
+      <point x="154" y="390" type="line"/>
+    </contour>
+    <contour>
+      <point x="215" y="390" type="curve"/>
+      <point x="215" y="250" type="line"/>
+      <point x="318" y="250"/>
+      <point x="421" y="308"/>
+      <point x="421" y="485" type="curve"/>
+      <point x="281" y="485" type="line"/>
+      <point x="281" y="419"/>
+      <point x="266" y="390"/>
+    </contour>
+    <component base="corner_curve" xOffset="240" yOffset="120"/>
+  </outline>
+</glyph>

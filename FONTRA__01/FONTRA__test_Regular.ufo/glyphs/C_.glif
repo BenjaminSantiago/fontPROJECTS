@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="C" format="2">
+  <advance width="501"/>
+  <unicode hex="0043"/>
+  <outline>
+    <component base="corner_curve" xOffset="274" yOffset="523"/>
+    <component base="corner_curve" xScale="0" xyScale="1" yxScale="-1" yScale="0" xOffset="275" yOffset="551"/>
+    <component base="corner_curve" xScale="-1" yScale="-1" xOffset="247" yOffset="230"/>
+    <component base="corner_curve" xScale="0" xyScale="-1" yxScale="1" yScale="0" xOffset="246" yOffset="202"/>
+    <component base="vertical" yScale="0.4294896168226422" xOffset="20" yOffset="229.88278738301838"/>
+  </outline>
+</glyph>

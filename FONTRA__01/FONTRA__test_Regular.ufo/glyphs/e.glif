@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="e" format="2">
+  <advance width="481"/>
+  <unicode hex="0065"/>
+  <outline>
+    <contour>
+      <point x="20" y="298" type="line"/>
+      <point x="20" y="236" type="line"/>
+      <point x="461" y="236" type="line"/>
+      <point x="461" y="298" type="line"/>
+    </contour>
+    <contour>
+      <point x="255" y="364" type="line"/>
+      <point x="306" y="364"/>
+      <point x="321" y="334"/>
+      <point x="321" y="298" type="curve"/>
+      <point x="461" y="298" type="line"/>
+      <point x="461" y="445"/>
+      <point x="358" y="504"/>
+      <point x="255" y="504" type="curve"/>
+    </contour>
+    <contour>
+      <point x="321" y="177" type="line"/>
+      <point x="321" y="156"/>
+      <point x="292" y="141"/>
+      <point x="226" y="141" type="curve"/>
+      <point x="226" y="1" type="line"/>
+      <point x="403" y="1"/>
+      <point x="461" y="104"/>
+      <point x="461" y="177" type="curve"/>
+    </contour>
+    <component base="corner_curve" xScale="-1" yScale="-1" xOffset="227" yOffset="236"/>
+    <component base="corner_curve" xScale="0" xyScale="1" yxScale="-1" yScale="0" xOffset="255" yOffset="297"/>
+  </outline>
+</glyph>

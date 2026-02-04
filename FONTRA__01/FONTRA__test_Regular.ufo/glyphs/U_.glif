@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="U" format="2">
+  <advance width="500"/>
+  <unicode hex="0055"/>
+  <outline>
+    <component base="corner_curve" xScale="0" xyScale="-1" yxScale="1" yScale="0" xOffset="235" yOffset="196"/>
+    <component base="corner_curve" xScale="-1" yScale="-1" xOffset="237" yOffset="224"/>
+    <component base="vertical" yScale="0.7010989010989013" xOffset="10" yOffset="224"/>
+    <component base="vertical" yScale="0.73978021978022" xOffset="310" yOffset="195"/>
+  </outline>
+</glyph>

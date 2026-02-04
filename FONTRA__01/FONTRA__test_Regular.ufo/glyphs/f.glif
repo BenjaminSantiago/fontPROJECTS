@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="f" format="2">
+  <advance width="285"/>
+  <unicode hex="0066"/>
+  <outline>
+    <component base="corner_curve" xScale="0" xyScale="1" yxScale="-1" yScale="0" xOffset="265" yOffset="498"/>
+    <component base="vertical" xScale="-1" yScale="-0.6648291069459762" xOffset="190" yOffset="499"/>
+    <component base="vertical" xScale="0" xyScale="1" yxScale="-0.2263382705429552" yScale="0" xOffset="239.7543762215994" yOffset="339"/>
+  </outline>
+</glyph>

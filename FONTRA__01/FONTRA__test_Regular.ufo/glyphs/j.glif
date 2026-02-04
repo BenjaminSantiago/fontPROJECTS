@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="j" format="2">
+  <advance width="295"/>
+  <unicode hex="006A"/>
+  <outline>
+    <component base="i" xOffset="75"/>
+    <component base="corner_curve" xScale="0" xyScale="-1" yxScale="1" yScale="0" xOffset="20" yOffset="1"/>
+  </outline>
+</glyph>
