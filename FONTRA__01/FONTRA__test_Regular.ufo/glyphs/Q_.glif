@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="Q" format="2">
+  <advance width="637"/>
+  <unicode hex="0051"/>
+  <outline>
+    <component base="O"/>
+    <component base="corner_curve" xScale="-1" yScale="-1" xOffset="486" yOffset="69"/>
+    <component base="corner_curve" xOffset="212" yOffset="69"/>
+  </outline>
+</glyph>

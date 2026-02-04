@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="R" format="2">
+  <advance width="527"/>
+  <unicode hex="0052"/>
+  <outline>
+    <contour>
+      <point x="40" y="750" type="line"/>
+      <point x="40" y="0" type="line"/>
+      <point x="180" y="0" type="line"/>
+      <point x="180" y="750" type="line"/>
+    </contour>
+    <contour>
+      <point x="176" y="610" type="line"/>
+      <point x="240" y="610" type="line"/>
+      <point x="240" y="750" type="line"/>
+      <point x="176" y="750" type="line"/>
+    </contour>
+    <contour>
+      <point x="176" y="309" type="line"/>
+      <point x="210" y="309" type="line"/>
+      <point x="210" y="449" type="line"/>
+      <point x="176" y="449" type="line"/>
+    </contour>
+    <component base="corner_curve" xScale="-1" yScale="-1" xOffset="508" yOffset="215"/>
+    <component base="corner_curve" xOffset="234" yOffset="215"/>
+    <component base="corner_curve" xOffset="238" yOffset="515"/>
+    <component base="corner_curve" xScale="0" xyScale="-1" yxScale="1" yScale="0" xOffset="210" yOffset="516"/>
+  </outline>
+</glyph>

@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="Z" format="2">
+  <advance width="572.4369508115972"/>
+  <unicode hex="005A"/>
+  <outline>
+    <component base="corner_curve" xScale="0" xyScale="-1" yxScale="1" yScale="0" xOffset="265.19201454654024" yOffset="611"/>
+    <component base="vertical" xScale="0" xyScale="1" yxScale="-0.580154355016538" yScale="0" xOffset="500.19201454654024" yOffset="590"/>
+    <component base="corner_curve" xScale="0" xyScale="1" yxScale="-1" yScale="0" xOffset="265.19201454654024" yOffset="337"/>
+    <component base="vertical" xScale="2.754952043442033e-06" xyScale="0.999999999996935" yxScale="-0.6965820868244148" yScale="1.5499509103759954e-06" xOffset="552.4365100192703" yOffset="-20.00116246290718"/>
+    <component base="vertical" xScale="-1" yScale="-0.2749724366041897" xOffset="190.19201454654024" yOffset="339"/>
+  </outline>
+</glyph>

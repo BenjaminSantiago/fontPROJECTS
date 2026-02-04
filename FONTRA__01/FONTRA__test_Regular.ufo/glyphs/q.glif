@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="q" format="2">
+  <advance width="649"/>
+  <unicode hex="0071"/>
+  <outline>
+    <contour>
+      <point x="311" y="0" type="line"/>
+      <point x="311" y="-249" type="line"/>
+      <point x="400" y="-249" type="line"/>
+      <point x="451" y="-135" type="line"/>
+      <point x="451" y="0" type="line"/>
+    </contour>
+    <contour>
+      <point x="451" y="0" type="line"/>
+      <point x="451" y="500" type="line"/>
+      <point x="311" y="500" type="line"/>
+      <point x="311" y="0" type="line"/>
+    </contour>
+    <contour>
+      <point x="311" y="0" type="line"/>
+      <point x="311" y="140" type="line"/>
+      <point x="246" y="140" type="line"/>
+      <point x="246" y="0" type="line"/>
+    </contour>
+    <contour>
+      <point x="311" y="360" type="line"/>
+      <point x="311" y="500" type="line"/>
+      <point x="275" y="500" type="line"/>
+      <point x="275" y="360" type="line"/>
+    </contour>
+    <contour>
+      <point x="40" y="294" type="line"/>
+      <point x="40" y="235" type="line"/>
+      <point x="180" y="235" type="line"/>
+      <point x="180" y="294" type="line"/>
+    </contour>
+    <component base="corner_curve" xScale="0" xyScale="-1" yxScale="1" yScale="0" xOffset="394" yOffset="-42"/>
+    <component base="corner_curve" xScale="-1" yScale="-1" xOffset="247" yOffset="235"/>
+    <component base="corner_curve" xScale="0" xyScale="1" yxScale="-1" yScale="0" xOffset="275" yOffset="293"/>
+  </outline>
+</glyph>

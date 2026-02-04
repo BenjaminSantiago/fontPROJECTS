@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="y" format="2">
+  <advance width="511"/>
+  <unicode hex="0079"/>
+  <outline>
+    <contour>
+      <point x="331" y="0" type="line"/>
+      <point x="331" y="-40" type="line"/>
+      <point x="471" y="-40" type="line"/>
+      <point x="471" y="0" type="line"/>
+    </contour>
+    <component base="corner_curve" xScale="0" xyScale="-1" yxScale="1" yScale="0" xOffset="236" yOffset="-39"/>
+    <component base="corner_curve" xScale="-1" yScale="-1" xOffset="237" yOffset="-11"/>
+    <component base="n" xScale="-1" yScale="-1" xOffset="511" yOffset="500"/>
+  </outline>
+</glyph>

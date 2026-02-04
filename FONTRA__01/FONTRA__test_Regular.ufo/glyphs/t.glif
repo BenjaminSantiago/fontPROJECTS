@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="t" format="2">
+  <advance width="337"/>
+  <unicode hex="0074"/>
+  <outline>
+    <contour>
+      <point x="30" y="350" type="line"/>
+      <point x="30" y="490" type="line"/>
+      <point x="300" y="490" type="line"/>
+      <point x="300" y="350" type="line"/>
+    </contour>
+    <component base="corner_curve" xScale="0" xyScale="-1" yxScale="-1" yScale="0" xOffset="317" yOffset="196"/>
+    <component base="vertical" xScale="-1" yScale="0.561988730454855" xOffset="242" yOffset="195"/>
+  </outline>
+</glyph>
