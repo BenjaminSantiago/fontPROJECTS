@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="K" format="2">
+  <advance width="1000"/>
+  <unicode hex="004B"/>
+  <outline>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.colorLayerMapping</key>
+      <array>
+        <array>
+          <string>K.color0</string>
+          <integer>5</integer>
+        </array>
+      </array>
+    </dict>
+  </lib>
+</glyph>
