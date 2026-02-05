@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="F" format="2">
+  <advance width="1000"/>
+  <unicode hex="0046"/>
+  <outline>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.colorLayerMapping</key>
+      <array>
+        <array>
+          <string>F.color0</string>
+          <integer>3</integer>
+        </array>
+      </array>
+    </dict>
+  </lib>
+</glyph>
