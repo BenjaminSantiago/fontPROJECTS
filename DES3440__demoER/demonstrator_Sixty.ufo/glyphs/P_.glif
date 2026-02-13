@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="P" format="2">
+  <advance width="369.9218120963694"/>
+  <unicode hex="0050"/>
+  <outline>
+    <component base="I" xOffset="-2.3435031366872607"/>
+    <component base="stroke_fragment" xOffset="101.65649686331274" yOffset="481"/>
+    <component base="stroke_fragment" xOffset="136.65649686331273" yOffset="480"/>
+    <component base="stroke_fragment" xOffset="136.65649686331273" yOffset="480"/>
+    <component base="stroke_fragment" xOffset="161.65649686331273" yOffset="478"/>
+    <component base="stroke_fragment" xOffset="192.65649686331273" yOffset="473"/>
+    <component base="stroke_fragment" xOffset="225.65649686331273" yOffset="465"/>
+    <component base="stroke_fragment" xOffset="251.65649686331273" yOffset="455"/>
+    <component base="stroke_fragment" xOffset="274.6564968633127" yOffset="440"/>
+    <component base="stroke_fragment" xOffset="290.6564968633127" yOffset="424"/>
+    <component base="stroke_fragment" xOffset="302.6564968633127" yOffset="404"/>
+    <component base="stroke_fragment" xOffset="307.6564968633127" yOffset="391"/>
+    <component base="stroke_fragment" xOffset="311.6564968633127" yOffset="372"/>
+    <component base="stroke_fragment" xOffset="313.6564968633127" yOffset="352"/>
+    <component base="stroke_fragment" xOffset="312.6564968633127" yOffset="332"/>
+    <component base="stroke_fragment" xOffset="310.6564968633127" yOffset="314"/>
+    <component base="stroke_fragment" xOffset="305.6564968633127" yOffset="295"/>
+    <component base="stroke_fragment" xOffset="297.6564968633127" yOffset="276"/>
+    <component base="stroke_fragment" xOffset="287.6564968633127" yOffset="261"/>
+    <component base="stroke_fragment" xOffset="271.6564968633127" yOffset="243"/>
+    <component base="stroke_fragment" xOffset="259.6564968633127" yOffset="233"/>
+    <component base="stroke_fragment" xOffset="237.65649686331273" yOffset="220"/>
+    <component base="stroke_fragment" xOffset="217.65649686331273" yOffset="212"/>
+    <component base="stroke_fragment" xOffset="197.65649686331273" yOffset="205"/>
+    <component base="stroke_fragment" xOffset="167.65649686331273" yOffset="198"/>
+    <component base="stroke_fragment" xOffset="137.65649686331273" yOffset="194"/>
+    <component base="stroke_fragment" xOffset="106.65649686331274" yOffset="191"/>
+  </outline>
+</glyph>

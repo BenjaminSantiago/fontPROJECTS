@@ -1,7 +1,23 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph name="R" format="2">
-  <advance width="500"/>
+  <advance width="459.5741661489875"/>
   <unicode hex="0052"/>
   <outline>
+    <component base="P"/>
+    <component base="stroke_fragment" xOffset="222" yOffset="191"/>
+    <component base="stroke_fragment" xOffset="261" yOffset="183"/>
+    <component base="stroke_fragment" xOffset="294" yOffset="177"/>
+    <component base="stroke_fragment" xOffset="327" yOffset="151"/>
+    <component base="stroke_fragment" xOffset="343" yOffset="132"/>
+    <component base="stroke_fragment" xOffset="346" yOffset="114"/>
+    <component base="stroke_fragment" xOffset="347" yOffset="94"/>
+    <component base="stroke_fragment" xOffset="348" yOffset="76"/>
+    <component base="stroke_fragment" xOffset="348" yOffset="59"/>
+    <component base="stroke_fragment" xOffset="351" yOffset="40"/>
+    <component base="stroke_fragment" xOffset="361" yOffset="26"/>
+    <component base="stroke_fragment" xOffset="388" yOffset="20"/>
+    <component base="stroke_fragment" xOffset="315" yOffset="165"/>
+    <component base="stroke_fragment" xOffset="408" yOffset="20"/>
+    <component base="stroke_fragment" xOffset="428" yOffset="20"/>
   </outline>
 </glyph>
