@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="H" format="2">
+  <advance width="500"/>
+  <unicode hex="0048"/>
+  <outline>
+    <contour>
+      <point x="44" y="749" type="line"/>
+      <point x="44" y="0" type="line"/>
+      <point x="219" y="0" type="line"/>
+      <point x="219" y="749" type="line"/>
+    </contour>
+    <contour>
+      <point x="276" y="749" type="line"/>
+      <point x="276" y="0" type="line"/>
+      <point x="451" y="0" type="line"/>
+      <point x="451" y="749" type="line"/>
+    </contour>
+    <contour>
+      <point x="93" y="280" type="line"/>
+      <point x="391" y="280" type="line"/>
+      <point x="391" y="500" type="line"/>
+      <point x="93" y="500" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>xyz.fontra.layer-names</key>
+      <dict>
+        <key>152ac364</key>
+        <string>029ff691</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="curved_thing" format="2">
+  <advance width="287"/>
+  <outline>
+    <contour>
+      <point x="267" y="401.5" type="curve" smooth="yes"/>
+      <point x="267" y="469.7071666003"/>
+      <point x="211.7071666003" y="525"/>
+      <point x="143.5" y="525" type="curve" smooth="yes"/>
+      <point x="75.29283339969999" y="525"/>
+      <point x="20" y="469.7071666003"/>
+      <point x="20" y="401.5" type="curve" smooth="yes"/>
+      <point x="20" y="333.2928333997"/>
+      <point x="75.29283339969999" y="278"/>
+      <point x="143.5" y="278" type="curve" smooth="yes"/>
+      <point x="211.7071666003" y="278"/>
+      <point x="267" y="333.2928333997"/>
+    </contour>
+  </outline>
+</glyph>
