@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <array>
+    <array>
+      <string>public.default</string>
+      <string>glyphs</string>
+    </array>
+    <array>
+      <string>color.A</string>
+      <string>glyphs.color.A_</string>
+    </array>
+    <array>
+      <string>color.S</string>
+      <string>glyphs.color.S_</string>
+    </array>
+    <array>
+      <string>color.D</string>
+      <string>glyphs.color.D_</string>
+    </array>
+    <array>
+      <string>color.F</string>
+      <string>glyphs.color.F_</string>
+    </array>
+    <array>
+      <string>color.J</string>
+      <string>glyphs.color.J_</string>
+    </array>
+    <array>
+      <string>color.K</string>
+      <string>glyphs.color.K_</string>
+    </array>
+    <array>
+      <string>color.L</string>
+      <string>glyphs.color.L_</string>
+    </array>
+    <array>
+      <string>color.semicolon</string>
+      <string>glyphs.color.semicolon</string>
+    </array>
+  </array>
+</plist>
