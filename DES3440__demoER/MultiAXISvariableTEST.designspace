@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<designspace format="5.0">
+  <axes>
+    <axis tag="wght" name="weight" minimum="100" maximum="900" default="400"/>
+    <axis tag="wdth" name="width" minimum="50" maximum="200" default="100"/>
+  </axes>
+  <sources>
+    <source filename="MultiAXISvariableTEST_thin condensed.ufo" name="3fd855fd" familyname="Multi Axis Variable Test" stylename="thin condensed">
+      <location>
+        <dimension name="weight" xvalue="100"/>
+        <dimension name="width" xvalue="50"/>
+      </location>
+    </source>
+    <source filename="MultiAXISvariableTEST_thin.ufo" name="844c6d73" familyname="Multi Axis Variable Test" stylename="thin">
+      <location>
+        <dimension name="weight" xvalue="100"/>
+        <dimension name="width" xvalue="100"/>
+      </location>
+    </source>
+    <source filename="MultiAXISvariableTEST_thin extended.ufo" name="3e9c5147" familyname="Multi Axis Variable Test" stylename="thin extended">
+      <location>
+        <dimension name="weight" xvalue="100"/>
+        <dimension name="width" xvalue="200"/>
+      </location>
+    </source>
+    <source filename="MultiAXISvariableTEST_regular condensed.ufo" name="813a650c" familyname="Multi Axis Variable Test" stylename="regular condensed">
+      <location>
+        <dimension name="weight" xvalue="400"/>
+        <dimension name="width" xvalue="50"/>
+      </location>
+    </source>
+    <source filename="MultiAXISvariableTEST_Regular.ufo" name="152ac364" familyname="Multi Axis Variable Test" stylename="Regular">
+      <location>
+        <dimension name="weight" xvalue="400"/>
+        <dimension name="width" xvalue="100"/>
+      </location>
+    </source>
+    <source filename="MultiAXISvariableTEST_Regular.ufo" name="029ff691" familyname="Multi Axis Variable Test" stylename="black">
+      <location>
+        <dimension name="weight" xvalue="900"/>
+        <dimension name="width" xvalue="100"/>
+      </location>
+    </source>
+    <source filename="MultiAXISvariableTEST_regular extended.ufo" name="2078f150" familyname="Multi Axis Variable Test" stylename="regular extended">
+      <location>
+        <dimension name="weight" xvalue="400"/>
+        <dimension name="width" xvalue="200"/>
+      </location>
+    </source>
+    <source filename="MultiAXISvariableTEST_black condensed.ufo" name="69f23af6" familyname="Multi Axis Variable Test" stylename="black condensed">
+      <location>
+        <dimension name="weight" xvalue="900"/>
+        <dimension name="width" xvalue="50"/>
+      </location>
+    </source>
+    <source filename="MultiAXISvariableTEST_black extended.ufo" name="b0dbf6e4" familyname="Multi Axis Variable Test" stylename="black extended">
+      <location>
+        <dimension name="weight" xvalue="900"/>
+        <dimension name="width" xvalue="200"/>
+      </location>
+    </source>
+  </sources>
+  <lib>
+    <dict>
+      <key>fontra.projectGlyphSets</key>
+      <array>
+        <dict>
+          <key>commentChars</key>
+          <string>#</string>
+          <key>dataFormat</key>
+          <string>glyph-names</string>
+          <key>name</key>
+          <string>GF Latin Kernel</string>
+          <key>url</key>
+          <string>https://cdn.jsdelivr.net/gh/googlefonts/glyphsets/data/results/txt/nice-names/GF_Latin_Kernel.txt</string>
+        </dict>
+      </array>
+    </dict>
+  </lib>
+</designspace>
