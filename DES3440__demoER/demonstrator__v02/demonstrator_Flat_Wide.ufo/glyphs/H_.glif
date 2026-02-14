@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="H" format="2">
+  <advance width="630.4293344124046"/>
+  <unicode hex="0048"/>
+  <outline>
+    <component base="I" xOffset="29.429334412404614"/>
+    <component base="I" xOffset="333.4293344124046"/>
+    <component base="crossbar" xOffset="126" yOffset="4"/>
+  </outline>
+</glyph>
