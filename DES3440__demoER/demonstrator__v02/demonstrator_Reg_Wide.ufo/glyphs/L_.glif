@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="L" format="2">
+  <advance width="475.9704206311984"/>
+  <unicode hex="004C"/>
+  <outline>
+    <component base="I" xOffset="7.105427357601002e-15"/>
+    <component base="stroke_fragment" xOffset="164.1326293432375" yOffset="20"/>
+    <component base="stroke_fragment" xOffset="188.1326293432375" yOffset="20"/>
+    <component base="stroke_fragment" xOffset="213.1326293432375" yOffset="20"/>
+    <component base="stroke_fragment" xOffset="237.1326293432375" yOffset="20"/>
+    <component base="stroke_fragment" xOffset="262.1326293432375" yOffset="20"/>
+    <component base="stroke_fragment" xOffset="286.1326293432375" yOffset="20"/>
+    <component base="stroke_fragment" xOffset="311.1326293432375" yOffset="20"/>
+    <component base="stroke_fragment" xOffset="360.1326293432375" yOffset="20"/>
+    <component base="stroke_fragment" xOffset="335.1326293432375" yOffset="20"/>
+  </outline>
+</glyph>

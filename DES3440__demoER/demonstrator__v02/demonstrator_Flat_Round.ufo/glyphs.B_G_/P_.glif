@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="P" format="2">
+  <advance width="422"/>
+  <unicode hex="0050"/>
+  <outline>
+    <contour>
+      <point x="290" y="374" type="curve" smooth="yes"/>
+      <point x="290" y="439"/>
+      <point x="248" y="479"/>
+      <point x="73" y="480" type="curve"/>
+      <point x="73" y="261" type="line"/>
+      <point x="218" y="260"/>
+      <point x="290" y="310"/>
+    </contour>
+  </outline>
+</glyph>

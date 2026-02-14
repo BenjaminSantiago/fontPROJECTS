@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="E" format="2">
+  <advance width="417.27954430858523"/>
+  <unicode hex="0045"/>
+  <outline>
+    <component base="crossbar" xOffset="23" yOffset="213"/>
+    <component base="stroke_fragment" xOffset="93" yOffset="267"/>
+    <component base="stroke_fragment" xOffset="117" yOffset="267"/>
+    <component base="stroke_fragment" xOffset="142" yOffset="267"/>
+    <component base="stroke_fragment" xOffset="166" yOffset="267"/>
+    <component base="stroke_fragment" xOffset="191" yOffset="267"/>
+    <component base="stroke_fragment" xOffset="215" yOffset="267"/>
+    <component base="stroke_fragment" xOffset="240" yOffset="267"/>
+    <component base="stroke_fragment" xOffset="289" yOffset="267"/>
+    <component base="stroke_fragment" xOffset="264" yOffset="267"/>
+    <component base="crossbar" xOffset="25" yOffset="-245"/>
+    <component base="I"/>
+  </outline>
+</glyph>
