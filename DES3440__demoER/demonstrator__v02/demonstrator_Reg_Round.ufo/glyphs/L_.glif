@@ -1,17 +1,17 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph name="L" format="2">
-  <advance width="346.70887872098984"/>
+  <advance width="470.531199304094"/>
   <unicode hex="004C"/>
   <outline>
-    <component base="I"/>
-    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="120" yOffset="32"/>
-    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="156" yOffset="32"/>
-    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="194" yOffset="32"/>
-    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="230" yOffset="32"/>
-    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="267" yOffset="32"/>
-    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="303" yOffset="32"/>
-    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="341" yOffset="32"/>
-    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="414" yOffset="32"/>
-    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="377" yOffset="32"/>
+    <component base="I" xOffset="-4.681627389350865"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="115.31837261064913" yOffset="32"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="151.31837261064913" yOffset="32"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="189.31837261064913" yOffset="32"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="225.31837261064913" yOffset="32"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="262.31837261064913" yOffset="32"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="298.31837261064913" yOffset="32"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="336.31837261064913" yOffset="32"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="409.31837261064913" yOffset="32"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="372.31837261064913" yOffset="32"/>
   </outline>
 </glyph>

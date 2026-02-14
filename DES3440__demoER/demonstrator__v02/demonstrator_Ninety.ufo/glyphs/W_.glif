@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="W" format="2">
+  <advance width="857.1035773095161"/>
+  <unicode hex="0057"/>
+  <outline>
+    <component base="V"/>
+    <component base="V"/>
+    <component base="V"/>
+    <component base="V" xOffset="385"/>
+  </outline>
+</glyph>

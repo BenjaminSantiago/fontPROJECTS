@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph name="T" format="2">
-  <advance width="426"/>
+  <advance width="601"/>
   <unicode hex="0054"/>
   <outline>
-    <component base="I" xOffset="85"/>
-    <component base="crossbar" xScale="1.5" yScale="1.5" xOffset="-97" yOffset="320"/>
+    <component base="I" xOffset="172.64400161860695"/>
+    <component base="crossbar" xScale="1.5" yScale="1.5" xOffset="-9.35599838139305" yOffset="320"/>
   </outline>
 </glyph>

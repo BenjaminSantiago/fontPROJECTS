@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="S" format="2">
+  <advance width="500"/>
+  <unicode hex="0053"/>
+  <outline>
+    <contour>
+      <point x="410" y="624" type="move"/>
+      <point x="410" y="683"/>
+      <point x="366" y="763"/>
+      <point x="246" y="763" type="curve" smooth="yes"/>
+      <point x="137" y="763"/>
+      <point x="67" y="673"/>
+      <point x="67" y="575" type="curve" smooth="yes"/>
+      <point x="67" y="405"/>
+      <point x="455" y="384"/>
+      <point x="455" y="195" type="curve" smooth="yes"/>
+      <point x="455" y="61"/>
+      <point x="361" y="-12"/>
+      <point x="266" y="-12" type="curve" smooth="yes"/>
+      <point x="162" y="-12"/>
+      <point x="88" y="60"/>
+      <point x="88" y="165" type="curve"/>
+    </contour>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="410" yOffset="624"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="408" yOffset="644"/>
+  </outline>
+</glyph>

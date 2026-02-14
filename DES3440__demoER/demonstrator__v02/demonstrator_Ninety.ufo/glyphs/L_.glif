@@ -1,17 +1,17 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph name="L" format="2">
-  <advance width="327.06316679540754"/>
+  <advance width="443.60357730951614"/>
   <unicode hex="004C"/>
   <outline>
-    <component base="I" xOffset="-3"/>
-    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="98" yOffset="50"/>
-    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="134" yOffset="50"/>
-    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="172" yOffset="50"/>
-    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="208" yOffset="50"/>
-    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="245" yOffset="50"/>
-    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="281" yOffset="50"/>
-    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="319" yOffset="50"/>
-    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="392" yOffset="50"/>
-    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="355" yOffset="50"/>
+    <component base="I" xOffset="-4.396422690483831"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="96.60357730951617" yOffset="50"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="132.60357730951617" yOffset="50"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="170.60357730951617" yOffset="50"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="206.60357730951617" yOffset="50"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="243.60357730951617" yOffset="50"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="279.60357730951614" yOffset="50"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="317.60357730951614" yOffset="50"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="390.60357730951614" yOffset="50"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="353.60357730951614" yOffset="50"/>
   </outline>
 </glyph>
