@@ -1,19 +1,19 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph name="E" format="2">
-  <advance width="427.8359808206521"/>
+  <advance width="589.2315001857426"/>
   <unicode hex="0045"/>
   <outline>
-    <component base="crossbar" xOffset="30" yOffset="213"/>
-    <component base="stroke_fragment" xOffset="98" yOffset="267"/>
-    <component base="stroke_fragment" xOffset="122" yOffset="267"/>
-    <component base="stroke_fragment" xOffset="147" yOffset="267"/>
-    <component base="stroke_fragment" xOffset="171" yOffset="267"/>
-    <component base="stroke_fragment" xOffset="196" yOffset="267"/>
-    <component base="stroke_fragment" xOffset="220" yOffset="267"/>
-    <component base="stroke_fragment" xOffset="245" yOffset="267"/>
-    <component base="stroke_fragment" xOffset="294" yOffset="267"/>
-    <component base="stroke_fragment" xOffset="269" yOffset="267"/>
-    <component base="crossbar" xOffset="26" yOffset="-248"/>
-    <component base="I"/>
+    <component base="crossbar" xScale="1.5" yScale="1.5" xOffset="7.515254705030891" yOffset="333"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="109.51525470503088" yOffset="414"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="145.51525470503088" yOffset="414"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="182.51525470503088" yOffset="414"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="218.51525470503088" yOffset="414"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="256.5152547050309" yOffset="414"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="292.5152547050309" yOffset="414"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="329.5152547050309" yOffset="414"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="403.5152547050309" yOffset="414"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="365.5152547050309" yOffset="414"/>
+    <component base="crossbar" xScale="1.5" yScale="1.5" xOffset="1.515254705030891" yOffset="-358"/>
+    <component base="I" xOffset="-5.484745294969109"/>
   </outline>
 </glyph>
