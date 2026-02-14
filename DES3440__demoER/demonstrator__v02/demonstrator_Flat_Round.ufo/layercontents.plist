@@ -10,5 +10,9 @@
       <string>BG</string>
       <string>glyphs.B_G_</string>
     </array>
+    <array>
+      <string>bg</string>
+      <string>glyphs.bg</string>
+    </array>
   </array>
 </plist>

@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="Q" format="2">
+  <advance width="939.5"/>
+  <unicode hex="0051"/>
+  <outline>
+    <component base="O" xOffset="-4.5"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="381" yOffset="89"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="426" yOffset="89"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="471" yOffset="89"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="516" yOffset="89"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="561" yOffset="74"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="606" yOffset="59"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="636" yOffset="29"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="666" yOffset="-1"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="696" yOffset="-31"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="726" yOffset="-61"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="756" yOffset="-91"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="801" yOffset="-106"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="846" yOffset="-106"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="886" yOffset="-106"/>
+  </outline>
+</glyph>
