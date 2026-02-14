@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="F" format="2">
+  <advance width="548.3559983813931"/>
+  <unicode hex="0046"/>
+  <outline>
+    <component base="I" xOffset="-4.5"/>
+    <component base="crossbar" xScale="1.5" yScale="1.5" xOffset="-15.5" yOffset="365"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="87.5" yOffset="416"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="123.5" yOffset="416"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="161.5" yOffset="416"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="197.5" yOffset="416"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="234.5" yOffset="416"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="270.5" yOffset="416"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="308.5" yOffset="416"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="381.5" yOffset="416"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="344.5" yOffset="416"/>
+  </outline>
+</glyph>

@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<designspace format="5.0">
+  <axes>
+    <axis tag="ROTA" name="rotation" minimum="0" maximum="90" default="30"/>
+    <axis tag="FRWI" name="fragment width" minimum="10" maximum="100" default="50"/>
+  </axes>
+  <sources>
+    <source filename="demonstrator_Flat.ufo" name="d48ed2a1" familyname="demonstrator" stylename="Flat">
+      <location>
+        <dimension name="rotation" xvalue="0"/>
+        <dimension name="fragment width" xvalue="50"/>
+      </location>
+    </source>
+    <source filename="demonstrator_Flat_Wide.ufo" name="30b56838" familyname="demonstrator" stylename="Flat_Wide">
+      <location>
+        <dimension name="rotation" xvalue="0"/>
+        <dimension name="fragment width" xvalue="100"/>
+      </location>
+    </source>
+    <source filename="demonstrator_Reg_Round.ufo" name="1898d048" familyname="demonstrator" stylename="Reg_Round">
+      <location>
+        <dimension name="rotation" xvalue="30"/>
+        <dimension name="fragment width" xvalue="10"/>
+      </location>
+    </source>
+    <source filename="demonstrator_Flat_Round.ufo" name="6e35874a" familyname="demonstrator" stylename="Flat_Round">
+      <location>
+        <dimension name="rotation" xvalue="0"/>
+        <dimension name="fragment width" xvalue="10"/>
+      </location>
+    </source>
+    <source filename="demonstrator_Regular.ufo" name="608886d6" familyname="demonstrator" stylename="Regular">
+      <location>
+        <dimension name="rotation" xvalue="30"/>
+        <dimension name="fragment width" xvalue="50"/>
+      </location>
+    </source>
+    <source filename="demonstrator_Reg_Wide.ufo" name="2b7237db" familyname="demonstrator" stylename="Reg_Wide">
+      <location>
+        <dimension name="rotation" xvalue="30"/>
+        <dimension name="fragment width" xvalue="100"/>
+      </location>
+    </source>
+    <source filename="demonstrator_Sixty_Round.ufo" name="eeecf887" familyname="demonstrator" stylename="Sixty_Round">
+      <location>
+        <dimension name="rotation" xvalue="60"/>
+        <dimension name="fragment width" xvalue="10"/>
+      </location>
+    </source>
+    <source filename="demonstrator_Sixty.ufo" name="8a4057e7" familyname="demonstrator" stylename="Sixty">
+      <location>
+        <dimension name="rotation" xvalue="60"/>
+        <dimension name="fragment width" xvalue="50"/>
+      </location>
+    </source>
+    <source filename="demonstrator_Sixty_wide.ufo" name="634fdd66" familyname="demonstrator" stylename="Sixty_wide">
+      <location>
+        <dimension name="rotation" xvalue="60"/>
+        <dimension name="fragment width" xvalue="100"/>
+      </location>
+    </source>
+    <source filename="demonstrator_Ninety_Round.ufo" name="663f45f0" familyname="demonstrator" stylename="Ninety_Round">
+      <location>
+        <dimension name="rotation" xvalue="90"/>
+        <dimension name="fragment width" xvalue="10"/>
+      </location>
+    </source>
+    <source filename="demonstrator_Ninety.ufo" name="14bdcfc5" familyname="demonstrator" stylename="Ninety">
+      <location>
+        <dimension name="rotation" xvalue="90"/>
+        <dimension name="fragment width" xvalue="50"/>
+      </location>
+    </source>
+    <source filename="demonstrator_Ninety_Wide.ufo" name="51d4a491" familyname="demonstrator" stylename="Ninety_Wide">
+      <location>
+        <dimension name="rotation" xvalue="90"/>
+        <dimension name="fragment width" xvalue="100"/>
+      </location>
+    </source>
+  </sources>
+  <lib>
+    <dict>
+      <key>fontra.projectGlyphSets</key>
+      <array>
+        <dict>
+          <key>commentChars</key>
+          <string>#</string>
+          <key>dataFormat</key>
+          <string>glyph-names</string>
+          <key>name</key>
+          <string>GF Latin Kernel</string>
+          <key>url</key>
+          <string>https://cdn.jsdelivr.net/gh/googlefonts/glyphsets/data/results/txt/nice-names/GF_Latin_Kernel.txt</string>
+        </dict>
+      </array>
+    </dict>
+  </lib>
+</designspace>
