@@ -4,14 +4,14 @@
   <unicode hex="004C"/>
   <outline>
     <component base="I"/>
-    <component base="stroke_fragment" xOffset="99" yOffset="20"/>
-    <component base="stroke_fragment" xOffset="123" yOffset="20"/>
-    <component base="stroke_fragment" xOffset="148" yOffset="20"/>
-    <component base="stroke_fragment" xOffset="172" yOffset="20"/>
-    <component base="stroke_fragment" xOffset="197" yOffset="20"/>
-    <component base="stroke_fragment" xOffset="221" yOffset="20"/>
-    <component base="stroke_fragment" xOffset="246" yOffset="20"/>
-    <component base="stroke_fragment" xOffset="295" yOffset="20"/>
-    <component base="stroke_fragment" xOffset="270" yOffset="20"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="120" yOffset="30"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="156" yOffset="30"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="194" yOffset="30"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="230" yOffset="30"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="267" yOffset="30"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="303" yOffset="30"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="341" yOffset="30"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="414" yOffset="30"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="377" yOffset="30"/>
   </outline>
 </glyph>

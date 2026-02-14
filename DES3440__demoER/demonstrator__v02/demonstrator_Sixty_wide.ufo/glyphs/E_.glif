@@ -1,19 +1,19 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph name="E" format="2">
-  <advance width="473.0027225835997"/>
+  <advance width="667.7439502614607"/>
   <unicode hex="0045"/>
   <outline>
-    <component base="crossbar" xOffset="50.07066558759537" yOffset="213"/>
-    <component base="stroke_fragment" xOffset="128.07066558759539" yOffset="249"/>
-    <component base="stroke_fragment" xOffset="162.07066558759539" yOffset="249"/>
-    <component base="stroke_fragment" xOffset="187.07066558759539" yOffset="249"/>
-    <component base="stroke_fragment" xOffset="211.07066558759539" yOffset="249"/>
-    <component base="stroke_fragment" xOffset="236.07066558759539" yOffset="249"/>
-    <component base="stroke_fragment" xOffset="260.0706655875954" yOffset="249"/>
-    <component base="stroke_fragment" xOffset="285.0706655875954" yOffset="249"/>
-    <component base="stroke_fragment" xOffset="334.0706655875954" yOffset="249"/>
-    <component base="stroke_fragment" xOffset="309.0706655875954" yOffset="249"/>
-    <component base="crossbar" xOffset="46.07066558759537" yOffset="-248"/>
-    <component base="I"/>
+    <component base="crossbar" xScale="1.5" yScale="1.5" xOffset="52.461067766738914" yOffset="362"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="159.46106776673892" yOffset="416"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="210.46106776673892" yOffset="416"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="248.46106776673892" yOffset="416"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="284.4610677667389" yOffset="416"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="321.4610677667389" yOffset="416"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="357.4610677667389" yOffset="416"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="395.4610677667389" yOffset="416"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="468.4610677667389" yOffset="416"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="431.4610677667389" yOffset="416"/>
+    <component base="crossbar" xScale="1.5" yScale="1.5" xOffset="46.461067766738914" yOffset="-329"/>
+    <component base="I" xOffset="-9.538932233261086"/>
   </outline>
 </glyph>

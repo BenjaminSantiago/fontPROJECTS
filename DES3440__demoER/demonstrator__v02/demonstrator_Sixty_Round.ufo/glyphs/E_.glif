@@ -1,19 +1,19 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph name="E" format="2">
-  <advance width="403.1638403014686"/>
+  <advance width="566.2327181211145"/>
   <unicode hex="0045"/>
   <outline>
-    <component base="crossbar" xOffset="11.999999999999993" yOffset="214"/>
-    <component base="stroke_fragment" xOffset="83" yOffset="267"/>
-    <component base="stroke_fragment" xOffset="107" yOffset="267"/>
-    <component base="stroke_fragment" xOffset="132" yOffset="267"/>
-    <component base="stroke_fragment" xOffset="156" yOffset="267"/>
-    <component base="stroke_fragment" xOffset="181" yOffset="267"/>
-    <component base="stroke_fragment" xOffset="205" yOffset="267"/>
-    <component base="stroke_fragment" xOffset="230" yOffset="267"/>
-    <component base="stroke_fragment" xOffset="279" yOffset="267"/>
-    <component base="stroke_fragment" xOffset="254" yOffset="267"/>
-    <component base="crossbar" xOffset="14.999999999999993" yOffset="-248"/>
-    <component base="I" xOffset="-7.105427357601002e-15"/>
+    <component base="crossbar" xScale="1.5" yScale="1.5" xOffset="-1.625153663652391" yOffset="326"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="97.37484633634762" yOffset="409"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="133.37484633634762" yOffset="409"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="170.37484633634762" yOffset="409"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="206.37484633634762" yOffset="409"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="244.37484633634762" yOffset="409"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="280.37484633634756" yOffset="409"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="317.37484633634756" yOffset="409"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="391.37484633634756" yOffset="409"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="353.37484633634756" yOffset="409"/>
+    <component base="crossbar" xScale="1.5" yScale="1.5" xOffset="-6.625153663652391" yOffset="-363"/>
+    <component base="I" xOffset="-4.625153663652398"/>
   </outline>
 </glyph>
