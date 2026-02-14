@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="P" format="2">
+  <advance width="473.83779128796084"/>
+  <unicode hex="0050"/>
+  <outline>
+    <component base="I" xOffset="7.105427357601002e-15"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="216" yOffset="738"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="248" yOffset="737"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="279" yOffset="735"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="309" yOffset="732"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="339" yOffset="728"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="369" yOffset="723"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="399" yOffset="716"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="429" yOffset="705"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="459" yOffset="689"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="495" yOffset="654"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="479" yOffset="674"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="507" yOffset="630"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="513" yOffset="608"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="515" yOffset="584"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="512" yOffset="554"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="504" yOffset="531"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="492" yOffset="509"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="477" yOffset="491"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="459" yOffset="476"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="441" yOffset="462"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="416" yOffset="449"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="387" yOffset="438"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="359" yOffset="428"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="329" yOffset="422"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="299" yOffset="416"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="237" yOffset="410"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="270" yOffset="413"/>
+  </outline>
+</glyph>

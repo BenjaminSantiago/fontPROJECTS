@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="T" format="2">
+  <advance width="374"/>
+  <unicode hex="0054"/>
+  <outline>
+    <component base="I" xOffset="98"/>
+    <component base="crossbar" xScale="1.5" yScale="1.5" xOffset="-123" yOffset="321"/>
+  </outline>
+</glyph>
