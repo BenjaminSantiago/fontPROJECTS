@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="slab_C3_R4" format="2">
+  <advance width="450"/>
+  <outline>
+    <contour>
+      <point x="300" y="600" type="line"/>
+      <point x="300" y="450" type="line"/>
+      <point x="450" y="450" type="line"/>
+      <point x="450" y="600" type="line"/>
+    </contour>
+  </outline>
+</glyph>

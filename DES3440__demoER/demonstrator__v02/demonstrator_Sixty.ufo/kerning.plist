@@ -2,10 +2,44 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
   <dict>
+    <key>A</key>
+    <dict>
+      <key>J</key>
+      <integer>-65</integer>
+      <key>Y</key>
+      <integer>-48</integer>
+    </dict>
+    <key>F</key>
+    <dict>
+      <key>A</key>
+      <integer>-145</integer>
+    </dict>
     <key>L</key>
     <dict>
       <key>T</key>
       <integer>-132</integer>
+    </dict>
+    <key>O</key>
+    <dict>
+      <key>Y</key>
+      <integer>-54</integer>
+    </dict>
+    <key>P</key>
+    <dict>
+      <key>A</key>
+      <integer>-81</integer>
+    </dict>
+    <key>T</key>
+    <dict>
+      <key>A</key>
+      <integer>-113</integer>
+    </dict>
+    <key>Y</key>
+    <dict>
+      <key>A</key>
+      <integer>-81</integer>
+      <key>O</key>
+      <integer>-81</integer>
     </dict>
   </dict>
 </plist>

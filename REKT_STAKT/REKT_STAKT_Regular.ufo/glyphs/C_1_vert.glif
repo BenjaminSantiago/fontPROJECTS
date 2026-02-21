@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="C1_vert" format="2">
+  <advance width="150"/>
+  <outline>
+    <component base="slab_C1_R1"/>
+    <component base="slab_C1_R2"/>
+    <component base="slab_C1_R3"/>
+    <component base="slab_C1_R4"/>
+    <component base="slab_C1_R5"/>
+  </outline>
+</glyph>

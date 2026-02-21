@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<designspace format="5.0">
+  <axes>
+    <axis tag="C1WI" name="Column 1 Wide" minimum="150" maximum="600" default="150"/>
+    <axis tag="C2WI" name="Column 2 Wide" minimum="150" maximum="600" default="150"/>
+    <axis tag="C3WI" name="Column 3 Wide" minimum="150" maximum="600" default="150"/>
+    <axis tag="slnt" name="slant" minimum="0" maximum="100" default="0"/>
+  </axes>
+  <sources>
+    <source filename="REKT_STAKT_Regular.ufo" name="1b12da89" familyname="REKT_STAKT" stylename="Regular">
+      <location>
+        <dimension name="Column 1 Wide" xvalue="150"/>
+        <dimension name="Column 2 Wide" xvalue="150"/>
+        <dimension name="Column 3 Wide" xvalue="150"/>
+        <dimension name="slant" xvalue="0"/>
+      </location>
+    </source>
+    <source filename="REKT_STAKT_SLANTED.ufo" name="3fe12594" familyname="REKT_STAKT" stylename="SLANTED">
+      <location>
+        <dimension name="Column 1 Wide" xvalue="150"/>
+        <dimension name="Column 2 Wide" xvalue="150"/>
+        <dimension name="Column 3 Wide" xvalue="150"/>
+        <dimension name="slant" xvalue="100"/>
+      </location>
+    </source>
+    <source filename="REKT_STAKT_COL 3 WIDE.ufo" name="5db777e5" familyname="REKT_STAKT" stylename="COL 3 WIDE">
+      <location>
+        <dimension name="Column 1 Wide" xvalue="150"/>
+        <dimension name="Column 2 Wide" xvalue="150"/>
+        <dimension name="Column 3 Wide" xvalue="600"/>
+        <dimension name="slant" xvalue="0"/>
+      </location>
+    </source>
+    <source filename="REKT_STAKT_COL 2 WIDE.ufo" name="5c871a0a" familyname="REKT_STAKT" stylename="COL 2 WIDE">
+      <location>
+        <dimension name="Column 1 Wide" xvalue="150"/>
+        <dimension name="Column 2 Wide" xvalue="600"/>
+        <dimension name="Column 3 Wide" xvalue="150"/>
+        <dimension name="slant" xvalue="0"/>
+      </location>
+    </source>
+    <source filename="REKT_STAKT_COL 1 WIDE.ufo" name="221f258d" familyname="REKT_STAKT" stylename="COL 1 WIDE">
+      <location>
+        <dimension name="Column 1 Wide" xvalue="600"/>
+        <dimension name="Column 2 Wide" xvalue="150"/>
+        <dimension name="Column 3 Wide" xvalue="150"/>
+        <dimension name="slant" xvalue="0"/>
+      </location>
+    </source>
+    <source filename="REKT_STAKT_SLANTED_WIDE.ufo" name="edb88896" familyname="REKT_STAKT" stylename="SLANTED_WIDE">
+      <location>
+        <dimension name="Column 1 Wide" xvalue="600"/>
+        <dimension name="Column 2 Wide" xvalue="600"/>
+        <dimension name="Column 3 Wide" xvalue="600"/>
+        <dimension name="slant" xvalue="100"/>
+      </location>
+    </source>
+  </sources>
+  <lib>
+    <dict>
+      <key>fontra.projectGlyphSets</key>
+      <array>
+        <dict>
+          <key>commentChars</key>
+          <string>#</string>
+          <key>dataFormat</key>
+          <string>glyph-names</string>
+          <key>name</key>
+          <string>GF Latin Kernel</string>
+          <key>url</key>
+          <string>https://cdn.jsdelivr.net/gh/googlefonts/glyphsets/data/results/txt/nice-names/GF_Latin_Kernel.txt</string>
+        </dict>
+      </array>
+    </dict>
+  </lib>
+</designspace>

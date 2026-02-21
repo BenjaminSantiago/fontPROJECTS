@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="B" format="2">
+  <advance width="1000"/>
+  <unicode hex="0042"/>
+  <outline>
+    <component base="slab_C2_R5" xOffset="500"/>
+    <component base="slab_C2_R3" xOffset="500"/>
+    <component base="slab_C2_R1" xOffset="500"/>
+    <component base="slab_C3_R4" xOffset="500"/>
+    <component base="C1_vert" xOffset="50"/>
+    <component base="slab_C3_R2" xOffset="500"/>
+  </outline>
+</glyph>
