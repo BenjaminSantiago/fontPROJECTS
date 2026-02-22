@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="V" format="2">
+  <advance width="2650"/>
+  <unicode hex="0056"/>
+  <outline>
+    <component base="slab_C1_R2"/>
+    <component base="slab_C1_R3" xOffset="200"/>
+    <component base="slab_C1_R4" xOffset="400"/>
+    <component base="slab_C1_R5" xOffset="600"/>
+    <component base="slab_C2_R1" xOffset="500"/>
+    <component base="slab_C3_R3" xOffset="1100"/>
+    <component base="slab_C3_R4" xOffset="1300"/>
+    <component base="slab_C3_R5" xOffset="1500"/>
+    <component base="slab_C3_R2" xOffset="900"/>
+  </outline>
+</glyph>
