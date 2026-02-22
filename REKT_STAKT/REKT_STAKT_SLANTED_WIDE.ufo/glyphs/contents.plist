@@ -4,8 +4,26 @@
   <dict>
     <key>A</key>
     <string>A_.glif</string>
+    <key>G</key>
+    <string>G_.glif</string>
+    <key>K</key>
+    <string>K_.glif</string>
+    <key>Q</key>
+    <string>Q_.glif</string>
+    <key>U</key>
+    <string>U_.glif</string>
+    <key>V</key>
+    <string>V_.glif</string>
+    <key>W</key>
+    <string>W_.glif</string>
     <key>X</key>
     <string>X_.glif</string>
+    <key>Y</key>
+    <string>Y_.glif</string>
+    <key>Z</key>
+    <string>Z_.glif</string>
+    <key>slab_C1_R1</key>
+    <string>slab_C_1_R_1.glif</string>
     <key>slab_C1_R2</key>
     <string>slab_C_1_R_2.glif</string>
   </dict>

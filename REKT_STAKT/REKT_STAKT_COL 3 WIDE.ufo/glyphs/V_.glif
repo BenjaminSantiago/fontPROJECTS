@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<glyph name="U" format="2">
+<glyph name="V" format="2">
   <advance width="1000"/>
-  <unicode hex="0055"/>
+  <unicode hex="0056"/>
   <outline>
     <component base="slab_C1_R2" xOffset="50"/>
     <component base="slab_C1_R3" xOffset="50"/>
@@ -12,7 +12,5 @@
     <component base="slab_C3_R4" xOffset="50"/>
     <component base="slab_C3_R5" xOffset="50"/>
     <component base="slab_C3_R2" xOffset="50"/>
-    <component base="slab_C1_R1" xOffset="50"/>
-    <component base="slab_C3_R1" xOffset="50"/>
   </outline>
 </glyph>
