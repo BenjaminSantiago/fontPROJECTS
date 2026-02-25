@@ -1,0 +1,9 @@
+feature liga 
+{
+    sub f i by f_i;
+} liga;
+
+feature calt 
+{
+    sub A C D C by ACDC.alt;
+} calt;
