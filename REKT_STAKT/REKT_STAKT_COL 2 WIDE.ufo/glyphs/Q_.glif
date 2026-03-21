@@ -10,10 +10,10 @@
       <point x="700" y="300" type="line"/>
     </contour>
     <contour>
-      <point x="800" y="100" type="line"/>
-      <point x="800" y="50" type="line"/>
-      <point x="950" y="50" type="line"/>
-      <point x="950" y="100" type="line"/>
+      <point x="800" y="150" type="line"/>
+      <point x="800" y="0" type="line"/>
+      <point x="950" y="0" type="line"/>
+      <point x="950" y="150" type="line"/>
     </contour>
     <component base="slab_C2_R5" xOffset="50"/>
     <component base="slab_C3_R2" xOffset="500"/>

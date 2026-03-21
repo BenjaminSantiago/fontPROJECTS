@@ -26,5 +26,7 @@
     <string>slab_C_1_R_1.glif</string>
     <key>slab_C1_R2</key>
     <string>slab_C_1_R_2.glif</string>
+    <key>space</key>
+    <string>space.glif</string>
   </dict>
 </plist>

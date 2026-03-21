@@ -84,5 +84,7 @@
     <string>slab_C_3_R_4.glif</string>
     <key>slab_C3_R5</key>
     <string>slab_C_3_R_5.glif</string>
+    <key>space</key>
+    <string>space.glif</string>
   </dict>
 </plist>
