@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<designspace format="5.0">
+  <axes>
+    <axis tag="wght" name="weight" minimum="100" maximum="900" default="400"/>
+    <axis tag="ROTA" name="rotation" minimum="0" maximum="90" default="45"/>
+  </axes>
+  <sources>
+    <source filename="VARIABLE__demo_FLAT.ufo" name="f916ff07" familyname="VariableDemo" stylename="FLAT">
+      <location>
+        <dimension name="weight" xvalue="400"/>
+        <dimension name="rotation" xvalue="0"/>
+      </location>
+    </source>
+    <source filename="VARIABLE__demo_Regular.ufo" name="75d556a9" familyname="VariableDemo" stylename="Regular">
+      <location>
+        <dimension name="weight" xvalue="400"/>
+        <dimension name="rotation" xvalue="45"/>
+      </location>
+    </source>
+    <source filename="VARIABLE__demo_NINETY.ufo" name="7014a516" familyname="VariableDemo" stylename="NINETY">
+      <location>
+        <dimension name="weight" xvalue="400"/>
+        <dimension name="rotation" xvalue="90"/>
+      </location>
+    </source>
+    <source filename="VARIABLE__demo_FLAT_WIDE.ufo" name="e4a5337a" familyname="VariableDemo" stylename="FLAT_WIDE">
+      <location>
+        <dimension name="weight" xvalue="900"/>
+        <dimension name="rotation" xvalue="0"/>
+      </location>
+    </source>
+    <source filename="VARIABLE__demo_Black.ufo" name="0f49b5c9" familyname="VariableDemo" stylename="Black">
+      <location>
+        <dimension name="weight" xvalue="900"/>
+        <dimension name="rotation" xvalue="45"/>
+      </location>
+    </source>
+    <source filename="VARIABLE__demo_NINETY_wide.ufo" name="39dbe9e2" familyname="VariableDemo" stylename="NINETY_wide">
+      <location>
+        <dimension name="weight" xvalue="900"/>
+        <dimension name="rotation" xvalue="90"/>
+      </location>
+    </source>
+  </sources>
+  <lib>
+    <dict>
+      <key>fontra.projectGlyphSets</key>
+      <array>
+        <dict>
+          <key>commentChars</key>
+          <string>#</string>
+          <key>dataFormat</key>
+          <string>glyph-names</string>
+          <key>name</key>
+          <string>GF Latin Kernel</string>
+          <key>url</key>
+          <string>https://cdn.jsdelivr.net/gh/googlefonts/glyphsets/data/results/txt/nice-names/GF_Latin_Kernel.txt</string>
+        </dict>
+      </array>
+    </dict>
+  </lib>
+</designspace>
