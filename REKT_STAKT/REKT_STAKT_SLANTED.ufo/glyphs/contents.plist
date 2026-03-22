@@ -24,6 +24,10 @@
     <string>Y_.glif</string>
     <key>Z</key>
     <string>Z_.glif</string>
+    <key>comma</key>
+    <string>comma.glif</string>
+    <key>period</key>
+    <string>period.glif</string>
     <key>slab_C1_R2</key>
     <string>slab_C_1_R_2.glif</string>
     <key>slab_C1_R3</key>

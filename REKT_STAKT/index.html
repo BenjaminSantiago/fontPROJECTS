@@ -4,17 +4,17 @@
             @font-face
             {
                 font-family: 'REKTSTAKT';
-                src        : url('REKT_STAKT__v05.ttf') format("truetype");
+                src        : url('REKT_STAKT__v06.ttf') format("truetype");
                 font-style : normal;
                 font-weight: normal;
             }
 
             *
             {
-                font-family: 'REKTSTAKT';
-                font-size  : 50px;
-                letter-spacing: 6px;
-                line-height: 160px;
+                font-family   : 'REKTSTAKT';
+                font-size     : 80px;
+                letter-spacing: 0px;
+                line-height   : 0.8em;
             }
 
             body
@@ -27,13 +27,13 @@
             {
                 width      : fit-content;
                 margin     : 0 auto;
-                white-space: normal;
+                white-space: pre-wrap;
             }
         </style>
     </head>
 
     <body>
-        <h1 contenteditable = "true">PROFESSORBENJAMIN.BIZ</h1>
+        <h1>PROFESSORBENJAMIN.BIZ</h1>
 
         <script>
             const el = document.querySelector("h1");
@@ -68,7 +68,7 @@
 
             function one_frame(time)
             {   
-                const t = time * 0.008;
+                const t = time * 0.005;
                 const cycle = ((t * 2) % (2 * Math.PI));
 
                 if(cycle < prev_cycle)
@@ -82,7 +82,7 @@
                 {
 
                     //console.log(`we're doin' something ${i}`);
-                    const offset = i * -0.9;
+                    const offset = i * -4;
 
                     const shift            = (2 * Math.PI) / 3;
                     const prev             = Math.sin(t + offset);
