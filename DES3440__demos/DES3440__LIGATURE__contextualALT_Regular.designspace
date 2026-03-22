@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<designspace format="5.0">
+  <sources>
+    <source filename="DES3440__LIGATURE__contextualALT_Regular_Regular.ufo" name="default" familyname="DES__3440___liga_cont_alt" stylename="Regular"/>
+  </sources>
+  <lib>
+    <dict>
+      <key>xyz.fontra.lineMetricsHorizontalLayout.zones</key>
+      <dict>
+        <key>ascender</key>
+        <integer>16</integer>
+        <key>baseline</key>
+        <integer>-16</integer>
+        <key>capHeight</key>
+        <integer>16</integer>
+        <key>descender</key>
+        <integer>-16</integer>
+        <key>xHeight</key>
+        <integer>16</integer>
+      </dict>
+    </dict>
+  </lib>
+</designspace>

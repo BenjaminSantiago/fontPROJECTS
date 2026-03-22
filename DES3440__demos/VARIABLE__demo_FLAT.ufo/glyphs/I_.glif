@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="I" format="2">
+  <advance width="350"/>
+  <unicode hex="0049"/>
+  <outline>
+    <component base="slab_part" xOffset="175" yOffset="60"/>
+    <component base="slab_part" xOffset="175" yOffset="165"/>
+    <component base="slab_part" xOffset="175" yOffset="270"/>
+    <component base="slab_part" xOffset="175" yOffset="375"/>
+    <component base="slab_part" xOffset="175" yOffset="480"/>
+    <component base="slab_part" xOffset="175" yOffset="585"/>
+    <component base="slab_part" xOffset="175" yOffset="690"/>
+  </outline>
+</glyph>
