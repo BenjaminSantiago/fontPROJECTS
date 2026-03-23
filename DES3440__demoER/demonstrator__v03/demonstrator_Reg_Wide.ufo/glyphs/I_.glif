@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="I" format="2">
+  <advance width="367.5577429170851"/>
+  <unicode hex="0049"/>
+  <outline>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="183.80105598514373" yOffset="50.67331640620783"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="183.80105598514373" yOffset="113.67331640620783"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="183.80105598514373" yOffset="176.67331640620785"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="183.80105598514373" yOffset="208.17331640620785"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="183.80105598514373" yOffset="238.17331640620785"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="183.80105598514373" yOffset="269.67331640620785"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="183.80105598514373" yOffset="301.17331640620785"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="183.80105598514373" yOffset="332.67331640620785"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="183.80105598514373" yOffset="364.17331640620785"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="183.80105598514373" yOffset="395.67331640620785"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="183.80105598514373" yOffset="427.17331640620785"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="183.80105598514373" yOffset="458.67331640620785"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="183.80105598514373" yOffset="490.17331640620785"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="183.80105598514373" yOffset="521.6733164062078"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="183.80105598514373" yOffset="553.1733164062078"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="183.80105598514373" yOffset="583.1733164062078"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="183.80105598514373" yOffset="646.1733164062078"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="183.80105598514373" yOffset="614.6733164062078"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="183.80105598514373" yOffset="677.6733164062078"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="183.80105598514373" yOffset="709.1733164062078"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="183.80105598514373" yOffset="740.6733164062078"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="183.80105598514373" yOffset="82.17331640620783"/>
+    <component base="stroke_fragment" xScale="1.5" yScale="1.5" xOffset="183.80105598514373" yOffset="145.17331640620785"/>
+  </outline>
+</glyph>
