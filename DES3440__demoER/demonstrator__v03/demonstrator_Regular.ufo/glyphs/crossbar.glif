@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="crossbar" format="2">
+  <advance width="413.14483173658283"/>
+  <outline>
+    <component base="stroke_fragment" xOffset="72.57066558759537" yOffset="266"/>
+    <component base="stroke_fragment" xOffset="96.57066558759537" yOffset="266"/>
+    <component base="stroke_fragment" xOffset="121.57066558759537" yOffset="266"/>
+    <component base="stroke_fragment" xOffset="145.57066558759539" yOffset="266"/>
+    <component base="stroke_fragment" xOffset="170.57066558759539" yOffset="266"/>
+    <component base="stroke_fragment" xOffset="194.57066558759539" yOffset="266"/>
+    <component base="stroke_fragment" xOffset="219.57066558759539" yOffset="266"/>
+    <component base="stroke_fragment" xOffset="268.5706655875954" yOffset="266"/>
+    <component base="stroke_fragment" xOffset="243.57066558759539" yOffset="266"/>
+    <component base="stroke_fragment" xOffset="292.5706655875954" yOffset="266"/>
+    <component base="stroke_fragment" xOffset="317.5706655875954" yOffset="266"/>
+    <component base="stroke_fragment" xOffset="341.5706655875954" yOffset="266"/>
+  </outline>
+</glyph>
