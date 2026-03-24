@@ -35,7 +35,7 @@
     </head>
 
     <body>
-        <h1>PROFESSOR BENJAMIN. BIZ</h1>
+        <h1>PROFESSORBENJAMIN.BIZ</h1>
 
         <script>
             const el = document.querySelector("h1");
@@ -99,21 +99,24 @@
 
             const container = document.querySelector("h1");
 const totalChars = spans.length;
-
-function updateLayout() {
+const firstSpan = spans[0];
+    const rect = firstSpan.getBoundingClientRect();
+    const actualCharWidth = rect.width;
+    
+function updateLayout() 
+{
     const width = container.clientWidth;
 
     // pick a "target" character size
-    const idealCharPx = 50; // tweak this
+    const idealCharPx = 200; // tweak this
 
-    // how many chars *could* fit?
-    let charsPerLine = Math.floor(width / idealCharPx);
+    let raw = width / idealCharPx;
 
-    // clamp
-    charsPerLine = Math.max(1, Math.min(totalChars, charsPerLine));
 
-    // now force them to perfectly fill
-    const fontSize = width / 11;
+let charsPerLine = Math.floor(width / actualCharWidth);
+    //charsPerLine = Math.max(1, Math.min(totalChars, charsPerLine));
+
+    let fontSize = width / charsPerLine;
 
     container.style.fontSize = fontSize + "px";
 }

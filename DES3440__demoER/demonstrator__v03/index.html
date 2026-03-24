@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Spring 2026 (DES2440) Translation </title>
+    <style>
+    *
+    {
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+    }
+    
+    @font-face
+    {
+        font-family: "demonstrator";
+        src        : url("demonstrator__v07.otf") format("opentype");
+        font-weight: normal;
+        font-style : normal;
+    }
+    
+    html, body
+    {
+        background-color: #000000;
+        color           : #FFFFFF;
+        --bg: #000000;
+        --fg: #FFFFFF;
+
+        --color__01: #00FFFF;
+        --color__02: #FF00FF;
+        --color__03: #FFFF00;
+        --color__04: #00FF00;
+
+        margin: 0 auto;
+    }
+
+    body
+    {
+        font-family: "IBM-VGA";
+    }
+
+    .controls 
+    {
+        text-align: center;
+    }
+
+    h3.translation
+    {
+        font-family: "demonstrator";
+        font-size  : 150px;
+        font-weight: normal;
+        text-align : center;
+        color      : #FF00FF;
+    }
+
+    .preview 
+    {
+        font-family: "demonstrator";
+        font-variation-settings:
+            "ROTA" 0,
+            "FRWI" 10;
+        transition: font-variation-settings 0.4s ease;
+    }
+
+    form input:focus-visible { outline: none !important; }
+
+    button,
+    ::file-selector-button 
+    {
+    background-color: var(--color__02);
+    margin          : 10px;
+    padding         : 10px;
+    }
+
+    button:active,
+    ::file-selector-button:active
+    {
+    transform: translate(3px, 3px);
+    }
+
+    button.twirl
+    {
+    color: var(--fg) !important;
+    }
+
+    option:hover, option:focus, option:checked, select option:checked 
+    {
+    color     : var(--color__02) !important;
+    background: var(--bg) !important;
+    }
+    </style> 
+</head>
+
+<body>
+    <main>
+    <h3 class = "translation preview">
+        TRANSLATION
+    </h3>
+    <div class="controls">
+        <label>
+          Rotation (ROTA)
+          <input type="range" id="rota" min="0" max="90" value="0">
+        </label>
+      
+        <label>
+          Fragment Width (FRWI)
+          <input type="range" id="frwi" min="0" max="100" value="0">
+        </label>
+    </main>
+
+    <script>
+    const rotaSlider = document.getElementById("rota");
+    const frwiSlider = document.getElementById("frwi");
+    const preview = document.querySelector(".preview");
+
+    function updateFont() {
+    preview.style.fontVariationSettings =
+        `"ROTA" ${rotaSlider.value}, "FRWI" ${frwiSlider.value}`;
+    }
+
+    rotaSlider.addEventListener("input", updateFont);
+    frwiSlider.addEventListener("input", updateFont);
+
+    </script>
+</body>
+</html>
