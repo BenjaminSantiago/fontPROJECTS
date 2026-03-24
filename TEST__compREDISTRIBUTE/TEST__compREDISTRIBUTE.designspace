@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<designspace format="5.0">
+  <axes>
+    <axis tag="FRRO" name="fragment rotation" minimum="0" maximum="90" default="30"/>
+    <axis tag="frwi" name="fragment width" minimum="100" maximum="400" default="100"/>
+  </axes>
+  <sources>
+    <source filename="TEST__compREDISTRIBUTE_zero_thin.ufo" name="f8b02831" familyname="Untitled" stylename="zero_thin">
+      <location>
+        <dimension name="fragment rotation" xvalue="0"/>
+        <dimension name="fragment width" xvalue="100"/>
+      </location>
+    </source>
+    <source filename="TEST__compREDISTRIBUTE_zero_wide.ufo" name="a1ac5fb7" familyname="Untitled" stylename="zero_wide">
+      <location>
+        <dimension name="fragment rotation" xvalue="0"/>
+        <dimension name="fragment width" xvalue="400"/>
+      </location>
+    </source>
+    <source filename="TEST__compREDISTRIBUTE_Regular.ufo" name="05436dd6" familyname="Untitled" stylename="thirty_thin">
+      <location>
+        <dimension name="fragment rotation" xvalue="30"/>
+        <dimension name="fragment width" xvalue="100"/>
+      </location>
+    </source>
+    <source filename="TEST__compREDISTRIBUTE_thirty_wide.ufo" name="a0e97808" familyname="Untitled" stylename="thirty_wide">
+      <location>
+        <dimension name="fragment rotation" xvalue="30"/>
+        <dimension name="fragment width" xvalue="400"/>
+      </location>
+    </source>
+    <source filename="TEST__compREDISTRIBUTE_ninety_thin.ufo" name="9ee119ac" familyname="Untitled" stylename="ninety_thin">
+      <location>
+        <dimension name="fragment rotation" xvalue="90"/>
+        <dimension name="fragment width" xvalue="100"/>
+      </location>
+    </source>
+    <source filename="TEST__compREDISTRIBUTE_ninety_wide.ufo" name="cecddaaf" familyname="Untitled" stylename="ninety_wide">
+      <location>
+        <dimension name="fragment rotation" xvalue="90"/>
+        <dimension name="fragment width" xvalue="400"/>
+      </location>
+    </source>
+  </sources>
+  <lib>
+    <dict>
+      <key>fontra.projectGlyphSets</key>
+      <array>
+        <dict>
+          <key>commentChars</key>
+          <string>#</string>
+          <key>dataFormat</key>
+          <string>glyph-names</string>
+          <key>name</key>
+          <string>GF Latin Kernel</string>
+          <key>url</key>
+          <string>https://cdn.jsdelivr.net/gh/googlefonts/glyphsets/data/results/txt/nice-names/GF_Latin_Kernel.txt</string>
+        </dict>
+      </array>
+    </dict>
+  </lib>
+</designspace>

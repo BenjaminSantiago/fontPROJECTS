@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="E" format="2">
+  <advance width="553.0070528630808"/>
+  <unicode hex="0045"/>
+  <outline>
+    <component base="dingus" xScale="-0.999956204543833" xyScale="0.009358899202988482" yxScale="-0.009358899202988484" yScale="-0.9999562045438332" xOffset="483" yOffset="741"/>
+    <component base="dingus" xScale="-0.9997538761987523" xyScale="0.022185288494175413" yxScale="-0.022185288494175413" yScale="-0.9997538761987523" xOffset="453" yOffset="741"/>
+    <component base="dingus" xScale="-0.9997919988597102" xyScale="0.020395073329246335" yxScale="-0.020395073329246335" yScale="-0.9997919988597102" xOffset="423" yOffset="742"/>
+    <component base="dingus" xScale="-0.9999852717133177" xyScale="0.005427371043339234" yxScale="-0.005427371043339234" yScale="-0.9999852717133177" xOffset="393" yOffset="743"/>
+    <component base="dingus" xScale="-0.9999260616927789" xyScale="-0.012160228105138135" yxScale="0.012160228105138135" yScale="-0.9999260616927789" xOffset="363" yOffset="743"/>
+    <component base="dingus" xScale="-0.9987299268893085" xyScale="-0.050383857887983205" yxScale="0.050383857887983205" yScale="-0.9987299268893085" xOffset="333" yOffset="742"/>
+    <component base="dingus" xScale="-0.9964073898760292" xyScale="-0.08468951174991389" yxScale="0.08468951174991389" yScale="-0.9964073898760292" xOffset="303" yOffset="740"/>
+    <component base="dingus" xScale="-0.9883677479571766" xyScale="-0.152082855043094" yxScale="0.15208285504309402" yScale="-0.9883677479571767" xOffset="273" yOffset="737"/>
+    <component base="dingus" xScale="-0.9777355969157986" xyScale="-0.2098406598438611" yxScale="0.2098406598438611" yScale="-0.9777355969157986" xOffset="243" yOffset="732"/>
+    <component base="dingus" xScale="-0.9473419011327002" xyScale="-0.3202238628807681" yxScale="0.32022386288076815" yScale="-0.9473419011327003" xOffset="214" yOffset="724"/>
+    <component base="dingus" xScale="-0.8861716833100818" xyScale="-0.4633570412752739" yxScale="0.46335704127527394" yScale="-0.8861716833100819" xOffset="186" yOffset="714"/>
+    <component base="dingus" xScale="-0.7720282944805057" xyScale="-0.6355881626662988" yxScale="0.6355881626662988" yScale="-0.7720282944805057" xOffset="160" yOffset="699"/>
+    <component base="dingus" xScale="-0.5849389615558057" xyScale="-0.8110773152135471" yxScale="0.8110773152135471" yScale="-0.5849389615558057" xOffset="138" yOffset="679"/>
+    <component base="dingus" xScale="-0.3359414790126597" xyScale="-0.9418828603806243" yxScale="0.9418828603806243" yScale="-0.3359414790126597" xOffset="122" yOffset="654"/>
+    <component base="dingus" xScale="-0.16113633967734847" xyScale="-0.9869321557409031" yxScale="0.9869321557409031" yScale="-0.16113633967734847" xOffset="113" yOffset="625"/>
+    <component base="dingus" xScale="7.999729011296864e-14" xyScale="-1" yxScale="1" yScale="7.999729011296864e-14" xOffset="111" yOffset="565"/>
+    <component base="dingus" xScale="-8.054838117258495e-15" xyScale="1" yxScale="-1" yScale="-8.054838117258495e-15" xOffset="111" yOffset="593"/>
+    <component base="dingus" xScale="0" xyScale="-1" yxScale="1" yScale="0" xOffset="111" yOffset="538"/>
+    <component base="dingus" xScale="0" xyScale="-1" yxScale="1" yScale="0" xOffset="111" yOffset="508"/>
+    <component base="dingus" xScale="0" xyScale="-1" yxScale="1" yScale="0" xOffset="111" yOffset="478"/>
+    <component base="dingus" xScale="0" xyScale="-1" yxScale="1" yScale="0" xOffset="111" yOffset="448"/>
+    <component base="dingus" xScale="0" xyScale="-1" yxScale="1" yScale="0" xOffset="111" yOffset="418"/>
+    <component base="dingus" xScale="0" xyScale="-1" yxScale="1" yScale="0" xOffset="111" yOffset="388"/>
+    <component base="dingus" xScale="0" xyScale="-1" yxScale="1" yScale="0" xOffset="111" yOffset="358"/>
+    <component base="dingus" xScale="1.837589179357618e-15" xyScale="-1" yxScale="1" yScale="1.837589179357618e-15" xOffset="111" yOffset="328"/>
+    <component base="dingus" xScale="0" xyScale="-1" yxScale="1" yScale="0" xOffset="111" yOffset="298"/>
+    <component base="dingus" xScale="-2.503722994132712e-15" xyScale="-1" yxScale="1" yScale="-2.503722994132712e-15" xOffset="111" yOffset="268"/>
+    <component base="dingus" xScale="-4.2800798335329624e-15" xyScale="-1" yxScale="1" yScale="-4.2800798335329624e-15" xOffset="111" yOffset="238"/>
+    <component base="dingus" xScale="-1.2939819425609183e-14" xyScale="-1" yxScale="1" yScale="-1.2939819425609183e-14" xOffset="111" yOffset="208"/>
+    <component base="dingus" xScale="0" xyScale="-1" yxScale="1" yScale="0" xOffset="111" yOffset="178"/>
+    <component base="dingus" xScale="0.022002175077335907" xyScale="-0.9997579228452587" yxScale="0.9997579228452587" yScale="0.022002175077335907" xOffset="111" yOffset="148"/>
+    <component base="dingus" xScale="0.2478302300275827" xyScale="-0.9688034770191917" yxScale="0.9688034770191917" yScale="0.2478302300275827" xOffset="113" yOffset="118"/>
+    <component base="dingus" xScale="0.42309555995926545" xyScale="-0.9060850661735661" yxScale="0.9060850661735661" yScale="0.42309555995926545" xOffset="121" yOffset="89"/>
+    <component base="dingus" xScale="0.655726298120061" xyScale="-0.7549986900344668" yxScale="0.7549986900344668" yScale="0.655726298120061" xOffset="137" yOffset="64"/>
+    <component base="dingus" xScale="0.8174931567020052" xyScale="-0.5759383115798" yxScale="0.5759383115798" yScale="0.8174931567020052" xOffset="159" yOffset="44"/>
+    <component base="dingus" xScale="0.9112206691325984" xyScale="-0.4119185503780322" yxScale="0.41191855037803227" yScale="0.9112206691325985" xOffset="185" yOffset="29"/>
+    <component base="dingus" xScale="0.9600107236804702" xyScale="-0.2799632304758963" yxScale="0.2799632304758963" yScale="0.9600107236804702" xOffset="213" yOffset="18"/>
+    <component base="dingus" xScale="0.9837518365829085" xyScale="-0.17953362921679716" yxScale="0.17953362921679716" yScale="0.9837518365829085" xOffset="242" yOffset="11"/>
+    <component base="dingus" xScale="0.9918691341369386" xyScale="-0.12726201611808435" yxScale="0.12726201611808438" yScale="0.9918691341369387" xOffset="272" yOffset="5"/>
+    <component base="dingus" xScale="0.9977811442647686" xyScale="-0.06657918706088861" yxScale="0.06657918706088863" yScale="0.9977811442647687" xOffset="302" yOffset="2"/>
+    <component base="dingus" xScale="0.9993525203752106" xyScale="-0.03597971678201549" yxScale="0.035979716782015496" yScale="0.9993525203752107" xOffset="331"/>
+    <component base="dingus" xScale="0.999926061692779" xyScale="-0.012160228105129005" yxScale="0.012160228105129005" yScale="0.999926061692779" xOffset="361"/>
+    <component base="dingus" xScale="0.9999285331205221" xyScale="0.011955277137762824" yxScale="-0.011955277137762826" yScale="0.9999285331205222" xOffset="391" yOffset="-1"/>
+    <component base="dingus" xScale="0.9997919988597102" xyScale="0.020395073329246335" yxScale="-0.020395073329246335" yScale="0.9997919988597102" xOffset="421"/>
+    <component base="dingus" xScale="0.9997952593712448" xyScale="0.020234607453205718" yxScale="-0.020234607453205718" yScale="0.9997952593712448" xOffset="451" yOffset="1"/>
+    <component base="dingus" xOffset="147" yOffset="370"/>
+    <component base="dingus" xOffset="177" yOffset="370"/>
+    <component base="dingus" xOffset="207" yOffset="370"/>
+    <component base="dingus" xOffset="237" yOffset="370"/>
+    <component base="dingus" xOffset="267" yOffset="370"/>
+    <component base="dingus" xOffset="297" yOffset="370"/>
+    <component base="dingus" xOffset="327" yOffset="370"/>
+    <component base="dingus" xOffset="357" yOffset="370"/>
+    <component base="dingus" xOffset="387" yOffset="370"/>
+  </outline>
+</glyph>
