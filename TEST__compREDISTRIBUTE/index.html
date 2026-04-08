@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <style>
+        @font-face
+        {
+            font-family: "REDIST";
+            src: url("TEST__compREDISTRIBUTE__S__v04.otf") format("opentype");
+        }
+        body
+        {
+            transition: 0.5s;
+        }
+
+        h1
+        {
+            font-family: "REDIST";
+            font-weight: normal;
+            font-size  : 10vw;
+            width      : fit-content;
+            height     : fit-content;
+            top        : 50vh;
+            left       : 50vw;
+            position   : absolute;
+            animation  : rotater 3.0s linear infinite;
+            transform  : translateX(-50%) translateY(-50%);
+            padding    : 0;
+            margin     : 0;
+            text-align : center;
+        }
+
+        @keyframes rotater
+        {
+            0%
+            {
+                font-variation-settings: "FRRO" 0, "FRWI" 400;
+            }
+
+            50%
+            {
+                font-variation-settings: "FRRO" 180, "FRWI" 400;
+            }
+
+            100%
+            {
+                font-variation-settings: "FRRO" 360, "FRWI" 400;
+            }
+        }
+        </style>
+    </head>
+
+    <body>
+        <h1>YES SILLY</h1>
+        <script>
+        
+        function rando_color()
+        {
+            const color = Math.floor(Math.random() * 255);
+            return color;            
+        }
+
+
+        // Function to apply the random color to the body's background
+        function set_bg_and_H1()
+        {
+            let red   = rando_color();
+            let green = rando_color();
+            let blue  = rando_color();
+
+            document.body.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+            document.querySelector("h1").style.color = `rgb(${255 - red}, ${255 - green}, ${255 - blue})`;        
+        }
+
+        const interval = setInterval(set_bg_and_H1, 800);
+        set_bg_and_H1();
+        </script>
+    </body>
+</html>
