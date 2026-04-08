@@ -12,6 +12,7 @@
             *
             {
                 font-family   : 'REKTSTAKT';
+                font-size     : 5vw;
                 letter-spacing: 0.2vw;
                 line-height   : 0.8em;
             }
@@ -35,7 +36,7 @@
     </head>
 
     <body>
-        <h1>PROFESSORBENJAMIN.BIZ</h1>
+        <h1>WELCOME TO GRAPHIC DESIGN!</h1>
 
         <script>
             const el = document.querySelector("h1");
@@ -98,31 +99,31 @@
             requestAnimationFrame(one_frame);
 
             const container = document.querySelector("h1");
-const totalChars = spans.length;
-const firstSpan = spans[0];
-    const rect = firstSpan.getBoundingClientRect();
-    const actualCharWidth = rect.width;
+            const totalChars = spans.length;
+            const firstSpan = spans[0];
+            const rect = firstSpan.getBoundingClientRect();
+            const actualCharWidth = rect.width;
     
-function updateLayout() 
-{
-    const width = container.clientWidth;
+            function updateLayout() 
+            {
+                const width = container.clientWidth;
 
-    // pick a "target" character size
-    const idealCharPx = 200; // tweak this
+                // pick a "target" character size
+                const idealCharPx = 200; // tweak this
 
-    let raw = width / idealCharPx;
+                let raw = width / idealCharPx;
 
 
-let charsPerLine = Math.floor(width / actualCharWidth);
-    //charsPerLine = Math.max(1, Math.min(totalChars, charsPerLine));
+                let charsPerLine = Math.floor(width / actualCharWidth);
+                //charsPerLine = Math.max(1, Math.min(totalChars, charsPerLine));
 
-    let fontSize = width / charsPerLine;
+                let fontSize = width / charsPerLine;
 
-    container.style.fontSize = fontSize + "px";
-}
+                container.style.fontSize = fontSize + "px";
+            }
 
-window.addEventListener("resize", updateLayout);
-updateLayout();
+            window.addEventListener("resize", updateLayout);
+            updateLayout();
         </script>
     </body>
 </html>
