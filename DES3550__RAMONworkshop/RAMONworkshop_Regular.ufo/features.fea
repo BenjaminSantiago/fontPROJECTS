@@ -1,0 +1,11 @@
+feature calt
+{
+  sub B B' by B_2;
+  sub B_2 B' by B_3;
+  sub B_3 B' by B;
+
+  sub O O' by O_2;
+  sub O_2 O' by O_3;
+  sub O_3 O' by O;
+} calt;
+
