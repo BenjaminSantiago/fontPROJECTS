@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>B</key>
+    <string>B_.glif</string>
+    <key>B_2</key>
+    <string>B__2.glif</string>
+    <key>B_3</key>
+    <string>B__3.glif</string>
+    <key>L</key>
+    <string>L_.glif</string>
+    <key>L_2</key>
+    <string>L__2.glif</string>
+    <key>L_3</key>
+    <string>L__3.glif</string>
+    <key>M</key>
+    <string>M_.glif</string>
+    <key>O</key>
+    <string>O_.glif</string>
+    <key>O_2</key>
+    <string>O__2.glif</string>
+    <key>O_3</key>
+    <string>O__3.glif</string>
+    <key>Q</key>
+    <string>Q_.glif</string>
+    <key>Q_2</key>
+    <string>Q__2.glif</string>
+    <key>Q_3</key>
+    <string>Q__3.glif</string>
+  </dict>
+</plist>
