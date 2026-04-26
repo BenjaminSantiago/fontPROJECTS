@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<designspace format="5.0">
+  <axes>
+    <axis tag="CRVD" name="curvedness" minimum="0" maximum="100" default="0"/>
+    <axis tag="SHFT" name="Shift" minimum="0" maximum="100" default="0"/>
+  </axes>
+  <sources>
+    <source filename="TEST__ANGLEtoCURVE_Regular.ufo" name="46d8c8c8" familyname="angle_to_curve" stylename="UNcurve_UNshift">
+      <location>
+        <dimension name="curvedness" xvalue="0"/>
+        <dimension name="Shift" xvalue="0"/>
+      </location>
+    </source>
+    <source filename="TEST__ANGLEtoCURVE_UNcurve_SHIFT.ufo" name="1ccd43bc" familyname="angle_to_curve" stylename="UNcurve_SHIFT">
+      <location>
+        <dimension name="curvedness" xvalue="0"/>
+        <dimension name="Shift" xvalue="100"/>
+      </location>
+    </source>
+    <source filename="TEST__ANGLEtoCURVE_CURVE_UNshift.ufo" name="56942f7e" familyname="angle_to_curve" stylename="CURVE_UNshift">
+      <location>
+        <dimension name="curvedness" xvalue="100"/>
+        <dimension name="Shift" xvalue="0"/>
+      </location>
+    </source>
+    <source filename="TEST__ANGLEtoCURVE_CURVE_SHIFT.ufo" name="95a53ca0" familyname="angle_to_curve" stylename="CURVE_SHIFT">
+      <location>
+        <dimension name="curvedness" xvalue="100"/>
+        <dimension name="Shift" xvalue="100"/>
+      </location>
+    </source>
+  </sources>
+  <lib>
+    <dict>
+      <key>fontra.projectGlyphSets</key>
+      <array>
+        <dict>
+          <key>commentChars</key>
+          <string>#</string>
+          <key>dataFormat</key>
+          <string>glyph-names</string>
+          <key>name</key>
+          <string>GF Latin Kernel</string>
+          <key>url</key>
+          <string>https://cdn.jsdelivr.net/gh/googlefonts/glyphsets/data/results/txt/nice-names/GF_Latin_Kernel.txt</string>
+        </dict>
+      </array>
+    </dict>
+  </lib>
+</designspace>
