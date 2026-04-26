@@ -6,26 +6,32 @@
             font-family: "REDIST";
             src: url("TEST__compREDISTRIBUTE__S__v04.otf") format("opentype");
         }
-        body
+
+
+        body, html
         {
             transition: 0.5s;
+            margin    : 0;
         }
 
         h1
         {
-            font-family: "REDIST";
-            font-weight: normal;
-            font-size  : 10vw;
-            width      : fit-content;
-            height     : fit-content;
-            top        : 50vh;
-            left       : 50vw;
-            position   : absolute;
-            animation  : rotater 3.0s linear infinite;
-            transform  : translateX(-50%) translateY(-50%);
-            padding    : 0;
-            margin     : 0;
-            text-align : center;
+            font-family    : "REDIST";
+            font-weight    : normal;
+            font-size      : 80vmin;
+            width          : 100vw;
+            height         : 50vh;
+            top            : 50vh;
+            left           : 50vw;
+            position       : absolute;
+            animation      : rotater 3.0s ease-in-out infinite;
+            transform      : translateX(-50%) translateY(-50%);
+            padding        : 0;
+            margin         : 0;
+            text-align     : center;
+            display        : flex;
+            justify-content: center;
+            align-items    : center;
         }
 
         @keyframes rotater
@@ -49,9 +55,11 @@
     </head>
 
     <body>
-        <h1>YES SILLY</h1>
+        <h1></h1>
         <script>
-        
+        const text        = "YESSILLY";
+        const the_heading = document.querySelector("h1");
+        let   which_char  = 0;
         function rando_color()
         {
             const color = Math.floor(Math.random() * 255);
@@ -67,10 +75,13 @@
             let blue  = rando_color();
 
             document.body.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
-            document.querySelector("h1").style.color = `rgb(${255 - red}, ${255 - green}, ${255 - blue})`;        
+            the_heading.style.color = `rgb(${255 - red}, ${255 - green}, ${255 - blue})`;        
+            the_heading.textContent = text[which_char];
+            
+            which_char = (which_char + 1) % text.length;
         }
 
-        const interval = setInterval(set_bg_and_H1, 800);
+        const interval = setInterval(set_bg_and_H1, 1500);
         set_bg_and_H1();
         </script>
     </body>
