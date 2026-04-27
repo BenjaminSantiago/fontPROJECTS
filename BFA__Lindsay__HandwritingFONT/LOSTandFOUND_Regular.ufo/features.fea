@@ -1,0 +1,19 @@
+@LC = [a b c d e f g h i j k l m n o p q r s t u v w x y z space];
+@LC_2 = [a_2 b_2 c_2 d_2 e_2 f_2 g_2 h_2 i_2 j_2 k_2 l_2 m_2 n_2 o_2 p_2 q_2 r_2 s_2 t_2 u_2 v_2 w_2 x_2 y_2 z_2 space_2];
+@LC_3 = [a_3 b_3 c_3 d_3 e_3 f_3 g_3 h_3 i_3 j_3 k_3 l_3 m_3 n_3 o_3 p_3 q_3 r_3 s_3 t_3 u_3 v_3 w_3 x_3 y_3 z_3 space_3];
+
+@UC = [A B C D E F G H I J K L M N O P Q R S T U V W X Y Z space];
+@UC_2 = [A_2 B_2 C_2 D_2 E_2 F_2 G_2 H_2 I_2 J_2 K_2 L_2 M_2 N_2 O_2 P_2 Q_2 R_2 S_2 T_2 U_2 V_2 W_2 X_2 Y_2 Z_2 space_2];
+@UC_3 = [A_3 B_3 C_3 D_3 E_3 F_3 G_3 H_3 I_3 J_3 K_3 L_3 M_3 N_3 O_3 P_3 Q_3 R_3 S_3 T_3 U_3 V_3 W_3 X_3 Y_3 Z_3 space_3];
+
+feature calt
+{
+  sub @LC @LC' by @LC_2;
+  sub @LC_2 @LC' by @LC_3;
+  sub @LC_3 @LC' by @LC;
+  
+  sub @UC @UC' by @UC_2;
+  sub @UC_2 @UC' by @UC_3;
+  sub @UC_3 @UC' by @UC;
+} calt;
+
