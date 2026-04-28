@@ -153,6 +153,9 @@
       <string>z_3</string>
       <string>m_2</string>
       <string>m_3</string>
+      <string>asterisk</string>
+      <string>asterisk_2</string>
+      <string>asterisk_3</string>
     </array>
     <key>xyz.fontra.lineMetricsHorizontalLayout.zones</key>
     <dict>
