@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<designspace format="5.0">
+  <axes>
+    <axis tag="ANES" name="A_ness" minimum="0" maximum="2600" default="0"/>
+    <axis tag="SNES" name="S_ness" minimum="0" maximum="100" default="0"/>
+  </axes>
+  <sources>
+    <source filename="TEST__multiLETTERcurve__v01_Regular.ufo" name="156b9f9f" familyname="Untitled" stylename="Regular">
+      <location>
+        <dimension name="A_ness" xvalue="0"/>
+        <dimension name="S_ness" xvalue="0"/>
+      </location>
+    </source>
+    <source filename="TEST__multiLETTERcurve__v01_S.ufo" name="521ca980" familyname="Untitled" stylename="S">
+      <location>
+        <dimension name="A_ness" xvalue="0"/>
+        <dimension name="S_ness" xvalue="100"/>
+      </location>
+    </source>
+    <source filename="TEST__multiLETTERcurve__v01_A.ufo" name="a68dfc29" familyname="Untitled" stylename="A">
+      <location>
+        <dimension name="A_ness" xvalue="100"/>
+        <dimension name="S_ness" xvalue="0"/>
+      </location>
+    </source>
+  </sources>
+  <lib>
+    <dict>
+      <key>fontra.projectGlyphSets</key>
+      <array>
+        <dict>
+          <key>commentChars</key>
+          <string>#</string>
+          <key>dataFormat</key>
+          <string>glyph-names</string>
+          <key>name</key>
+          <string>GF Latin Kernel</string>
+          <key>url</key>
+          <string>https://cdn.jsdelivr.net/gh/googlefonts/glyphsets/data/results/txt/nice-names/GF_Latin_Kernel.txt</string>
+        </dict>
+      </array>
+    </dict>
+  </lib>
+</designspace>

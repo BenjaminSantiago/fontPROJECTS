@@ -40,6 +40,8 @@
     <string>R_.glif</string>
     <key>S</key>
     <string>S_.glif</string>
+    <key>T</key>
+    <string>T_.glif</string>
     <key>U</key>
     <string>U_.glif</string>
     <key>V</key>
@@ -50,6 +52,8 @@
     <string>X_.glif</string>
     <key>Y</key>
     <string>Y_.glif</string>
+    <key>Z</key>
+    <string>Z_.glif</string>
     <key>space</key>
     <string>space.glif</string>
   </dict>
