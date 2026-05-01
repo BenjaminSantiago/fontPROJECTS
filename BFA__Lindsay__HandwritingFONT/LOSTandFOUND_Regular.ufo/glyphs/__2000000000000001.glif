@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="._2" format="2">
+  <advance width="160.49339480044802"/>
+  <outline>
+    <contour>
+      <point x="124.78480714099985" y="-14" type="line"/>
+      <point x="112.78480714099985" y="-17"/>
+      <point x="93.78480714099985" y="-12"/>
+      <point x="80.78480714099985" y="-12" type="curve" smooth="yes"/>
+      <point x="63.784807140999845" y="-12"/>
+      <point x="44.784807140999845" y="-13"/>
+      <point x="28.784807140999845" y="-6" type="curve" smooth="yes"/>
+      <point x="15.78480714099985" y="-1"/>
+      <point x="5.784807140999851" y="28"/>
+      <point x="11.78480714099985" y="39" type="curve" smooth="yes"/>
+      <point x="19.784807140999852" y="55"/>
+      <point x="39.784807140999845" y="49"/>
+      <point x="52.784807140999845" y="48" type="curve" smooth="yes"/>
+      <point x="107.78480714099985" y="45" type="line" smooth="yes"/>
+      <point x="120.78480714099985" y="44"/>
+      <point x="134.78480714099985" y="33"/>
+      <point x="138.78480714099985" y="24" type="curve" smooth="yes"/>
+      <point x="141.78480714099985" y="12"/>
+      <point x="142.78480714099985" y="-9"/>
+      <point x="124.78480714099985" y="-14" type="curve"/>
+    </contour>
+  </outline>
+</glyph>

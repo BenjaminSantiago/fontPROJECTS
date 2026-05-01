@@ -2,6 +2,14 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
   <dict>
+    <key>&amp;_2</key>
+    <string>&amp;_2.glif</string>
+    <key>&amp;_3</key>
+    <string>&amp;_3.glif</string>
+    <key>._2</key>
+    <string>__2000000000000001.glif</string>
+    <key>._3</key>
+    <string>__3000000000000001.glif</string>
     <key>A</key>
     <string>A_.glif</string>
     <key>A_2</key>
@@ -164,6 +172,8 @@
     <string>a_2.glif</string>
     <key>a_3</key>
     <string>a_3.glif</string>
+    <key>ampersand</key>
+    <string>ampersand.glif</string>
     <key>asterisk</key>
     <string>asterisk.glif</string>
     <key>asterisk_2</key>
@@ -248,6 +258,12 @@
     <string>n_2.glif</string>
     <key>n_3</key>
     <string>n_3.glif</string>
+    <key>numbersign</key>
+    <string>numbersign.glif</string>
+    <key>numbersign_2</key>
+    <string>numbersign_2.glif</string>
+    <key>numbersign_3</key>
+    <string>numbersign_3.glif</string>
     <key>o</key>
     <string>o.glif</string>
     <key>o_2</key>
@@ -260,12 +276,20 @@
     <string>p_2.glif</string>
     <key>p_3</key>
     <string>p_3.glif</string>
+    <key>period</key>
+    <string>period.glif</string>
     <key>q</key>
     <string>q.glif</string>
     <key>q_2</key>
     <string>q_2.glif</string>
     <key>q_3</key>
     <string>q_3.glif</string>
+    <key>question</key>
+    <string>question.glif</string>
+    <key>question_2</key>
+    <string>question_2.glif</string>
+    <key>question_3</key>
+    <string>question_3.glif</string>
     <key>r</key>
     <string>r.glif</string>
     <key>r_2</key>

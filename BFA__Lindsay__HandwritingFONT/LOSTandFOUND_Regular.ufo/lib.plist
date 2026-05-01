@@ -156,6 +156,18 @@
       <string>asterisk</string>
       <string>asterisk_2</string>
       <string>asterisk_3</string>
+      <string>ampersand</string>
+      <string>&amp;_2</string>
+      <string>&amp;_3</string>
+      <string>period</string>
+      <string>._2</string>
+      <string>._3</string>
+      <string>question</string>
+      <string>question_2</string>
+      <string>question_3</string>
+      <string>numbersign</string>
+      <string>numbersign_2</string>
+      <string>numbersign_3</string>
     </array>
     <key>xyz.fontra.lineMetricsHorizontalLayout.zones</key>
     <dict>
