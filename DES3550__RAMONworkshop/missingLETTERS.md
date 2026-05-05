@@ -7,12 +7,13 @@ As of 04/30/2026:
 
 - A --> need to fix paths
 - E --> Paige (scans, no svg)
-- I --> Grace (sara's section) [] ask
+- I --> Grace (sara's section) [X] ask
 - K --> Lyndsey (no scans, no svg)
 - M --> Catherine (no scans, svg) [] CHECK SVGs
 - N --> Sebastian G [] ask
 - U --> (?) need one more U
 
+- D --> Ailani
+
 - P --> (?)
-- D --> (?)
 - V --> (?)
