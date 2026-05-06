@@ -180,6 +180,12 @@
     <string>asterisk_2.glif</string>
     <key>asterisk_3</key>
     <string>asterisk_3.glif</string>
+    <key>at</key>
+    <string>at.glif</string>
+    <key>at_2</key>
+    <string>at_2.glif</string>
+    <key>at_3</key>
+    <string>at_3.glif</string>
     <key>b</key>
     <string>b.glif</string>
     <key>b_2</key>
@@ -276,6 +282,12 @@
     <string>p_2.glif</string>
     <key>p_3</key>
     <string>p_3.glif</string>
+    <key>percent</key>
+    <string>percent.glif</string>
+    <key>percent_2</key>
+    <string>percent_2.glif</string>
+    <key>percent_3</key>
+    <string>percent_3.glif</string>
     <key>period</key>
     <string>period.glif</string>
     <key>q</key>

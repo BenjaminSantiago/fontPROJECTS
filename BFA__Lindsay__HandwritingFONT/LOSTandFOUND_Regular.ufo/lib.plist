@@ -168,6 +168,12 @@
       <string>numbersign</string>
       <string>numbersign_2</string>
       <string>numbersign_3</string>
+      <string>percent</string>
+      <string>percent_2</string>
+      <string>percent_3</string>
+      <string>at</string>
+      <string>at_2</string>
+      <string>at_3</string>
     </array>
     <key>xyz.fontra.lineMetricsHorizontalLayout.zones</key>
     <dict>
