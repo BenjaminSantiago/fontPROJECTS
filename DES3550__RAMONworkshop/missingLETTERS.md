@@ -5,15 +5,5 @@ As of 04/30/2026:
 [] --> consider digitzing Luiza Dale workshop numbers
 [] --> Consider using elements from Helen's workshop as punctuation
 
-- A --> need to fix paths
-- E --> Paige (scans, no svg)
-- I --> Grace (sara's section) [X] ask
-- K --> Lyndsey (no scans, no svg)
-- M --> Catherine (no scans, svg) [] CHECK SVGs
-- N --> Sebastian G [] ask
-- U --> (?) need one more U
-
-- D --> Ailani
-
-- P --> (?)  gi
-- V --> (?)
+I --> waiting for Grace
+V --> need to ask from Nicole (Rafaela)

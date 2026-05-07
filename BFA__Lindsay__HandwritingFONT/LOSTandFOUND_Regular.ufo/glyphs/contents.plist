@@ -10,6 +10,14 @@
     <string>__2000000000000001.glif</string>
     <key>._3</key>
     <string>__3000000000000001.glif</string>
+    <key>1_2</key>
+    <string>1_2.glif</string>
+    <key>1_3</key>
+    <string>1_3.glif</string>
+    <key>2_2</key>
+    <string>2_2.glif</string>
+    <key>2_3</key>
+    <string>2_3.glif</string>
     <key>A</key>
     <string>A_.glif</string>
     <key>A_2</key>
@@ -210,12 +218,30 @@
     <string>e_2.glif</string>
     <key>e_3</key>
     <string>e_3.glif</string>
+    <key>eight</key>
+    <string>eight.glif</string>
+    <key>eight_2</key>
+    <string>eight_2.glif</string>
+    <key>eight_3</key>
+    <string>eight_3.glif</string>
     <key>f</key>
     <string>f.glif</string>
     <key>f_2</key>
     <string>f_2.glif</string>
     <key>f_3</key>
     <string>f_3.glif</string>
+    <key>five</key>
+    <string>five.glif</string>
+    <key>five_2</key>
+    <string>five_2.glif</string>
+    <key>five_3</key>
+    <string>five_3.glif</string>
+    <key>four</key>
+    <string>four.glif</string>
+    <key>four_2</key>
+    <string>four_2.glif</string>
+    <key>four_3</key>
+    <string>four_3.glif</string>
     <key>g</key>
     <string>g.glif</string>
     <key>g_2</key>
@@ -264,6 +290,8 @@
     <string>n_2.glif</string>
     <key>n_3</key>
     <string>n_3.glif</string>
+    <key>nine</key>
+    <string>nine.glif</string>
     <key>numbersign</key>
     <string>numbersign.glif</string>
     <key>numbersign_2</key>
@@ -276,6 +304,8 @@
     <string>o_2.glif</string>
     <key>o_3</key>
     <string>o_3.glif</string>
+    <key>one</key>
+    <string>one.glif</string>
     <key>p</key>
     <string>p.glif</string>
     <key>p_2</key>
@@ -314,6 +344,18 @@
     <string>s_2.glif</string>
     <key>s_3</key>
     <string>s_3.glif</string>
+    <key>seven</key>
+    <string>seven.glif</string>
+    <key>seven_2</key>
+    <string>seven_2.glif</string>
+    <key>seven_3</key>
+    <string>seven_3.glif</string>
+    <key>six</key>
+    <string>six.glif</string>
+    <key>six_2</key>
+    <string>six_2.glif</string>
+    <key>six_3</key>
+    <string>six_3.glif</string>
     <key>space</key>
     <string>space.glif</string>
     <key>space_2</key>
@@ -326,6 +368,14 @@
     <string>t_2.glif</string>
     <key>t_3</key>
     <string>t_3.glif</string>
+    <key>three</key>
+    <string>three.glif</string>
+    <key>three_2</key>
+    <string>three_2.glif</string>
+    <key>three_3</key>
+    <string>three_3.glif</string>
+    <key>two</key>
+    <string>two.glif</string>
     <key>u</key>
     <string>u.glif</string>
     <key>u_2</key>
