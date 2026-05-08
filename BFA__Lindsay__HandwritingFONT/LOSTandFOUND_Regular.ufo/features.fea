@@ -1,13 +1,53 @@
+# character classes
+#-----------------------------------
+
+# lowercase
+#-----------------------------------
 @LC = [a b c d e f g h i j k l m n o p q r s t u v w x y z space question];
 @LC_2 = [a_2 b_2 c_2 d_2 e_2 f_2 g_2 h_2 i_2 j_2 k_2 l_2 m_2 n_2 o_2 p_2 q_2 r_2 s_2 t_2 u_2 v_2 w_2 x_2 y_2 z_2 space_2 question_2];
 @LC_3 = [a_3 b_3 c_3 d_3 e_3 f_3 g_3 h_3 i_3 j_3 k_3 l_3 m_3 n_3 o_3 p_3 q_3 r_3 s_3 t_3 u_3 v_3 w_3 x_3 y_3 z_3 space_3 question_3];
 
+# uppercase
+#-----------------------------------
 @UC = [A B C D E F G H I J K L M N O P Q R S T U V W X Y Z space question];
 @UC_2 = [A_2 B_2 C_2 D_2 E_2 F_2 G_2 H_2 I_2 J_2 K_2 L_2 M_2 N_2 O_2 P_2 Q_2 R_2 S_2 T_2 U_2 V_2 W_2 X_2 Y_2 Z_2 space_2 question_2];
 @UC_3 = [A_3 B_3 C_3 D_3 E_3 F_3 G_3 H_3 I_3 J_3 K_3 L_3 M_3 N_3 O_3 P_3 Q_3 R_3 S_3 T_3 U_3 V_3 W_3 X_3 Y_3 Z_3 space_3 question_3];
 
+# punctuation
+#-----------------------------------
+@punc = [exclam quotedbl numbersign percent ampersand quotesingle parenleft parenright asterisk plus comma hyphen period slash colon semicolon equal question at backslash bracketright bracketleft braceleft braceright endash emdash quoteleft quoteright quotedblleft quotedblright];
+@punc_2 = [exclam_2 quotedbl_2 numbersign_2 percent_2 ampersand_2 quotesingle_2 parenleft_2 parenright_2 asterisk_2 plus_2 comma_2 hyphen_2 period_2 slash_2 colon_2 semicolon_2 equal_2 question_2 at_2 backslash_2 bracketright_2 bracketleft_2 braceleft_2 braceright_2 endash_2 emdash_2 quoteleft_2 quoteright_2 quotedblleft_2 quotedblright_2];
+@punc_3 = [exclam_3 quotedbl_3 numbersign_3 percent_3 ampersand_3 quotesingle_3 parenleft_3 parenright_3 asterisk_3 plus_3 comma_3 hyphen_3 period_3 slash_3 colon_3 semicolon_3 equal_3 question_3 at_3 backslash_3 bracketright_3 bracketleft_3 braceleft_3 braceright_3 endash_3 emdash_3 quoteleft_3 quoteright_3 quotedblleft_3 quotedblright_3];
+
+# nummers
+#-----------------------------------
+@num = [zero one two three four five six seven eight];
+@num_2 = [zero_2 one_2 two_2 three_2 four_2 five_2 six_2 seven_2 eight_2];
+@num_3 = [zero_3 one_3 two_3 three_3 four_3 five_3 six_3 seven_3 eight_3];
+
+
 feature calt
 {
+  # Lost + Found substitutions
+  #-----------------------------------
+  sub braceleft l o s t plus f o u n d braceright by lost_plus_found;
+  sub braceleft L o s t plus F o u n d braceright by lost_plus_found;
+  sub braceleft L O S T plus F O U N D braceright by lost_plus_found;
+  
+  sub braceleft space l o s t plus f o u n d space braceright by lost_plus_found;
+  sub braceleft space L o s t plus F o u n d space braceright by lost_plus_found;
+  sub braceleft space L O S T plus F O U N D space braceright by lost_plus_found;
+
+  sub braceleft space l o s t space plus space f o u n d space braceright by lost_plus_found;
+  sub braceleft space L o s t space plus space F o u n d space braceright by lost_plus_found;
+  sub braceleft space L O S T space plus space F O U N D space braceright by lost_plus_found;
+
+  sub braceleft l o s t space plus space f o u n d braceright by lost_plus_found;
+  sub braceleft L o s t space plus space F o u n d braceright by lost_plus_found;
+  sub braceleft L O S T space plus space F O U N D braceright by lost_plus_found;
+
+  # Glyph cycling stuff
+  #-----------------------------------
   sub @LC @LC' by @LC_2;
   sub @LC_2 @LC' by @LC_3;
   sub @LC_3 @LC' by @LC;
@@ -15,5 +55,13 @@ feature calt
   sub @UC @UC' by @UC_2;
   sub @UC_2 @UC' by @UC_3;
   sub @UC_3 @UC' by @UC;
+
+  sub @punc @punc' by @punc_2;
+  sub @punc_2 @punc' by @punc_3;
+  sub @punc_3 @punc' by @punc;
+
+  sub @num @num' by @num_2;
+  sub @num_2 @num' by @num_3;
+  sub @num_3 @num' by @num;
 } calt;
 

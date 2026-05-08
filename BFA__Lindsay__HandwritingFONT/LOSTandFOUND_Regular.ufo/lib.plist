@@ -157,11 +157,7 @@
       <string>asterisk_2</string>
       <string>asterisk_3</string>
       <string>ampersand</string>
-      <string>&amp;_2</string>
-      <string>&amp;_3</string>
       <string>period</string>
-      <string>._2</string>
-      <string>._3</string>
       <string>question</string>
       <string>question_2</string>
       <string>question_3</string>
@@ -199,6 +195,89 @@
       <string>eight_2</string>
       <string>eight_3</string>
       <string>nine</string>
+      <string>nine_2</string>
+      <string>nine_3</string>
+      <string>lost_plus_found</string>
+      <string>zero</string>
+      <string>zero_2</string>
+      <string>zero_3</string>
+      <string>exclam</string>
+      <string>exclam_2</string>
+      <string>exclam_3</string>
+      <string>comma</string>
+      <string>comma_2</string>
+      <string>comma_3</string>
+      <string>period_2</string>
+      <string>period_3</string>
+      <string>plus</string>
+      <string>plus_2</string>
+      <string>plus_3</string>
+      <string>braceleft</string>
+      <string>braceleft_2</string>
+      <string>braceleft_3</string>
+      <string>braceright</string>
+      <string>braceright_2</string>
+      <string>braceright_3</string>
+      <string>bracketleft</string>
+      <string>bracketleft_2</string>
+      <string>bracketleft_3</string>
+      <string>bracketright</string>
+      <string>bracketright_2</string>
+      <string>bracketright_3</string>
+      <string>equal</string>
+      <string>equal_2</string>
+      <string>equal_3</string>
+      <string>hyphen</string>
+      <string>hyphen_2</string>
+      <string>hyphen_3</string>
+      <string>endash</string>
+      <string>endash_2</string>
+      <string>endash_3</string>
+      <string>emdash</string>
+      <string>emdash_2</string>
+      <string>emdash_3</string>
+      <string>parenleft</string>
+      <string>parenleft_2</string>
+      <string>parenleft_3</string>
+      <string>parenright</string>
+      <string>parenright_2</string>
+      <string>parenright_3</string>
+      <string>slash</string>
+      <string>slash_2</string>
+      <string>slash_3</string>
+      <string>backslash</string>
+      <string>backslash_2</string>
+      <string>backslash_3</string>
+      <string>quotedblleft</string>
+      <string>quotedblleft_2</string>
+      <string>quotedblright</string>
+      <string>quotedblright_2</string>
+      <string>quotedbl</string>
+      <string>quotedblright_3</string>
+      <string>quotedbl_2</string>
+      <string>quotedbl_3</string>
+      <string>quoteleft</string>
+      <string>quoteright</string>
+      <string>quoteright_2</string>
+      <string>quoteright_3</string>
+      <string>quoteleft_2</string>
+      <string>quoteleft_3</string>
+      <string>quotedblleft_3</string>
+      <string>semicolon</string>
+      <string>semicolon_2</string>
+      <string>semicolon_3</string>
+      <string>colon</string>
+      <string>colon_2</string>
+      <string>colon_3</string>
+      <string>quotesingle</string>
+      <string>quotesingle_2</string>
+      <string>quotesingle_3</string>
+      <string>ampersand_2</string>
+      <string>ampersand_3</string>
+      <string>one_2</string>
+      <string>one_3</string>
+      <string>two_2</string>
+      <string>two_3</string>
     </array>
     <key>xyz.fontra.lineMetricsHorizontalLayout.zones</key>
     <dict>

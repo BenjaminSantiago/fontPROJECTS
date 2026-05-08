@@ -2,14 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
   <dict>
-    <key>&amp;_2</key>
-    <string>&amp;_2.glif</string>
-    <key>&amp;_3</key>
-    <string>&amp;_3.glif</string>
-    <key>._2</key>
-    <string>__2000000000000001.glif</string>
-    <key>._3</key>
-    <string>__3000000000000001.glif</string>
     <key>1_2</key>
     <string>1_2.glif</string>
     <key>1_3</key>
@@ -182,6 +174,10 @@
     <string>a_3.glif</string>
     <key>ampersand</key>
     <string>ampersand.glif</string>
+    <key>ampersand_2</key>
+    <string>ampersand_2.glif</string>
+    <key>ampersand_3</key>
+    <string>ampersand_3.glif</string>
     <key>asterisk</key>
     <string>asterisk.glif</string>
     <key>asterisk_2</key>
@@ -200,12 +196,54 @@
     <string>b_2.glif</string>
     <key>b_3</key>
     <string>b_3.glif</string>
+    <key>backslash</key>
+    <string>backslash.glif</string>
+    <key>backslash_2</key>
+    <string>backslash_2.glif</string>
+    <key>backslash_3</key>
+    <string>backslash_3.glif</string>
+    <key>braceleft</key>
+    <string>braceleft.glif</string>
+    <key>braceleft_2</key>
+    <string>braceleft_2.glif</string>
+    <key>braceleft_3</key>
+    <string>braceleft_3.glif</string>
+    <key>braceright</key>
+    <string>braceright.glif</string>
+    <key>braceright_2</key>
+    <string>braceright_2.glif</string>
+    <key>braceright_3</key>
+    <string>braceright_3.glif</string>
+    <key>bracketleft</key>
+    <string>bracketleft.glif</string>
+    <key>bracketleft_2</key>
+    <string>bracketleft_2.glif</string>
+    <key>bracketleft_3</key>
+    <string>bracketleft_3.glif</string>
+    <key>bracketright</key>
+    <string>bracketright.glif</string>
+    <key>bracketright_2</key>
+    <string>bracketright_2.glif</string>
+    <key>bracketright_3</key>
+    <string>bracketright_3.glif</string>
     <key>c</key>
     <string>c.glif</string>
     <key>c_2</key>
     <string>c_2.glif</string>
     <key>c_3</key>
     <string>c_3.glif</string>
+    <key>colon</key>
+    <string>colon.glif</string>
+    <key>colon_2</key>
+    <string>colon_2.glif</string>
+    <key>colon_3</key>
+    <string>colon_3.glif</string>
+    <key>comma</key>
+    <string>comma.glif</string>
+    <key>comma_2</key>
+    <string>comma_2.glif</string>
+    <key>comma_3</key>
+    <string>comma_3.glif</string>
     <key>d</key>
     <string>d.glif</string>
     <key>d_2</key>
@@ -224,6 +262,30 @@
     <string>eight_2.glif</string>
     <key>eight_3</key>
     <string>eight_3.glif</string>
+    <key>emdash</key>
+    <string>emdash.glif</string>
+    <key>emdash_2</key>
+    <string>emdash_2.glif</string>
+    <key>emdash_3</key>
+    <string>emdash_3.glif</string>
+    <key>endash</key>
+    <string>endash.glif</string>
+    <key>endash_2</key>
+    <string>endash_2.glif</string>
+    <key>endash_3</key>
+    <string>endash_3.glif</string>
+    <key>equal</key>
+    <string>equal.glif</string>
+    <key>equal_2</key>
+    <string>equal_2.glif</string>
+    <key>equal_3</key>
+    <string>equal_3.glif</string>
+    <key>exclam</key>
+    <string>exclam.glif</string>
+    <key>exclam_2</key>
+    <string>exclam_2.glif</string>
+    <key>exclam_3</key>
+    <string>exclam_3.glif</string>
     <key>f</key>
     <string>f.glif</string>
     <key>f_2</key>
@@ -254,6 +316,12 @@
     <string>h_2.glif</string>
     <key>h_3</key>
     <string>h_3.glif</string>
+    <key>hyphen</key>
+    <string>hyphen.glif</string>
+    <key>hyphen_2</key>
+    <string>hyphen_2.glif</string>
+    <key>hyphen_3</key>
+    <string>hyphen_3.glif</string>
     <key>i</key>
     <string>i.glif</string>
     <key>i_2</key>
@@ -278,6 +346,8 @@
     <string>l_2.glif</string>
     <key>l_3</key>
     <string>l_3.glif</string>
+    <key>lost_plus_found</key>
+    <string>lost_plus_found.glif</string>
     <key>m</key>
     <string>m.glif</string>
     <key>m_2</key>
@@ -292,6 +362,10 @@
     <string>n_3.glif</string>
     <key>nine</key>
     <string>nine.glif</string>
+    <key>nine_2</key>
+    <string>nine_2.glif</string>
+    <key>nine_3</key>
+    <string>nine_3.glif</string>
     <key>numbersign</key>
     <string>numbersign.glif</string>
     <key>numbersign_2</key>
@@ -306,12 +380,28 @@
     <string>o_3.glif</string>
     <key>one</key>
     <string>one.glif</string>
+    <key>one_2</key>
+    <string>one_2.glif</string>
+    <key>one_3</key>
+    <string>one_3.glif</string>
     <key>p</key>
     <string>p.glif</string>
     <key>p_2</key>
     <string>p_2.glif</string>
     <key>p_3</key>
     <string>p_3.glif</string>
+    <key>parenleft</key>
+    <string>parenleft.glif</string>
+    <key>parenleft_2</key>
+    <string>parenleft_2.glif</string>
+    <key>parenleft_3</key>
+    <string>parenleft_3.glif</string>
+    <key>parenright</key>
+    <string>parenright.glif</string>
+    <key>parenright_2</key>
+    <string>parenright_2.glif</string>
+    <key>parenright_3</key>
+    <string>parenright_3.glif</string>
     <key>percent</key>
     <string>percent.glif</string>
     <key>percent_2</key>
@@ -320,6 +410,16 @@
     <string>percent_3.glif</string>
     <key>period</key>
     <string>period.glif</string>
+    <key>period_2</key>
+    <string>period_2.glif</string>
+    <key>period_3</key>
+    <string>period_3.glif</string>
+    <key>plus</key>
+    <string>plus.glif</string>
+    <key>plus_2</key>
+    <string>plus_2.glif</string>
+    <key>plus_3</key>
+    <string>plus_3.glif</string>
     <key>q</key>
     <string>q.glif</string>
     <key>q_2</key>
@@ -332,6 +432,42 @@
     <string>question_2.glif</string>
     <key>question_3</key>
     <string>question_3.glif</string>
+    <key>quotedbl</key>
+    <string>quotedbl.glif</string>
+    <key>quotedbl_2</key>
+    <string>quotedbl_2.glif</string>
+    <key>quotedbl_3</key>
+    <string>quotedbl_3.glif</string>
+    <key>quotedblleft</key>
+    <string>quotedblleft.glif</string>
+    <key>quotedblleft_2</key>
+    <string>quotedblleft_2.glif</string>
+    <key>quotedblleft_3</key>
+    <string>quotedblleft_3.glif</string>
+    <key>quotedblright</key>
+    <string>quotedblright.glif</string>
+    <key>quotedblright_2</key>
+    <string>quotedblright_2.glif</string>
+    <key>quotedblright_3</key>
+    <string>quotedblright_3.glif</string>
+    <key>quoteleft</key>
+    <string>quoteleft.glif</string>
+    <key>quoteleft_2</key>
+    <string>quoteleft_2.glif</string>
+    <key>quoteleft_3</key>
+    <string>quoteleft_3.glif</string>
+    <key>quoteright</key>
+    <string>quoteright.glif</string>
+    <key>quoteright_2</key>
+    <string>quoteright_2.glif</string>
+    <key>quoteright_3</key>
+    <string>quoteright_3.glif</string>
+    <key>quotesingle</key>
+    <string>quotesingle.glif</string>
+    <key>quotesingle_2</key>
+    <string>quotesingle_2.glif</string>
+    <key>quotesingle_3</key>
+    <string>quotesingle_3.glif</string>
     <key>r</key>
     <string>r.glif</string>
     <key>r_2</key>
@@ -344,6 +480,12 @@
     <string>s_2.glif</string>
     <key>s_3</key>
     <string>s_3.glif</string>
+    <key>semicolon</key>
+    <string>semicolon.glif</string>
+    <key>semicolon_2</key>
+    <string>semicolon_2.glif</string>
+    <key>semicolon_3</key>
+    <string>semicolon_3.glif</string>
     <key>seven</key>
     <string>seven.glif</string>
     <key>seven_2</key>
@@ -356,6 +498,12 @@
     <string>six_2.glif</string>
     <key>six_3</key>
     <string>six_3.glif</string>
+    <key>slash</key>
+    <string>slash.glif</string>
+    <key>slash_2</key>
+    <string>slash_2.glif</string>
+    <key>slash_3</key>
+    <string>slash_3.glif</string>
     <key>space</key>
     <string>space.glif</string>
     <key>space_2</key>
@@ -376,6 +524,10 @@
     <string>three_3.glif</string>
     <key>two</key>
     <string>two.glif</string>
+    <key>two_2</key>
+    <string>two_2.glif</string>
+    <key>two_3</key>
+    <string>two_3.glif</string>
     <key>u</key>
     <string>u.glif</string>
     <key>u_2</key>
@@ -412,5 +564,11 @@
     <string>z_2.glif</string>
     <key>z_3</key>
     <string>z_3.glif</string>
+    <key>zero</key>
+    <string>zero.glif</string>
+    <key>zero_2</key>
+    <string>zero_2.glif</string>
+    <key>zero_3</key>
+    <string>zero_3.glif</string>
   </dict>
 </plist>
