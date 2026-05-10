@@ -244,6 +244,8 @@
       <integer>-29</integer>
       <key>y_3</key>
       <integer>-37</integer>
+      <key>z_3</key>
+      <integer>-34</integer>
     </dict>
     <key>a_3</key>
     <dict>
@@ -305,8 +307,15 @@
       <key>o</key>
       <integer>-37</integer>
     </dict>
+    <key>g</key>
+    <dict>
+      <key>e_2</key>
+      <integer>-62</integer>
+    </dict>
     <key>g_2</key>
     <dict>
+      <key>a_3</key>
+      <integer>-56</integer>
       <key>e_3</key>
       <integer>-48</integer>
     </dict>
@@ -334,6 +343,18 @@
     <dict>
       <key>f_3</key>
       <integer>-37</integer>
+    </dict>
+    <key>q</key>
+    <dict>
+      <key>u</key>
+      <integer>-101</integer>
+      <key>u_2</key>
+      <integer>-124</integer>
+    </dict>
+    <key>q_3</key>
+    <dict>
+      <key>u</key>
+      <integer>-83</integer>
     </dict>
     <key>r</key>
     <dict>
