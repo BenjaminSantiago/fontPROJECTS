@@ -6,14 +6,20 @@
     <integer>750</integer>
     <key>capHeight</key>
     <integer>750</integer>
+    <key>copyright</key>
+    <string>2026</string>
     <key>descender</key>
     <integer>-250</integer>
     <key>familyName</key>
-    <string>Ramon Tejada Workshop</string>
+    <string>Junior Seminar, Ramon Tejada Workshop (Spring 2026)</string>
     <key>guidelines</key>
     <array/>
     <key>italicAngle</key>
     <integer>0</integer>
+    <key>openTypeNameDescription</key>
+    <string>(A typeface made during a workshop at Purchase College, SUNY on 03/16/2026 with Ramon Tejada)</string>
+    <key>openTypeNameDesigner</key>
+    <string>Johanna Beltran, Lyndsey Bloom, Paige Burnside, Maya Cubarle, Catherine Espejo, Nicole Guardado, Chloe Gurreri, Sebastian Gutierrez, Shannon Herlihy, Justin Hidalgo, Connor Hoffstater, Jazmin Holness, Skylar Hyslop, Madeleine LaSala, Sarah Ledesky, Jesus Lopez, Valeria Lopez, Charlize Molyneux, Amanda Monteleone, Leonardo Pablo, Stephanie Paquin, Jeanette Rabanales, Yamilet Salcedo, Grace Stiltner, Aidan Tobin</string>
     <key>postscriptBlueValues</key>
     <array/>
     <key>postscriptFamilyBlues</key>
@@ -27,7 +33,7 @@
     <key>postscriptStemSnapV</key>
     <array/>
     <key>styleName</key>
-    <string>Regular</string>
+    <string>Home</string>
     <key>unitsPerEm</key>
     <integer>1000</integer>
     <key>xHeight</key>

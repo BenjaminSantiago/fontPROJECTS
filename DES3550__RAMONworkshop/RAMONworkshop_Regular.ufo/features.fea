@@ -1,14 +1,76 @@
+# CLASSES
+#------------------------------------------------------------
+#lowercase class
 @LC = [a b c d e f g h i j k l m n o p q r s t u v w x y z space];
-@UC = [A B C D E F G H I J K L M N O P Q R S T U V W X Y Z space];
+
+#letters in order to match lc class
+@UC_1 = [A B C D E F G H I J K L M N O P Q R S T U V W X Y Z space];
 @UC_2 = [A_2 B_2 C_2 D_2 E_2 F_2 G_2 H_2 I_2 J_2 K_2 L_2 M_2 N_2 O_2 P_2 Q_2 R_2 S_2 T_2 U_2 V_2 W_2 X_2 Y_2 Z_2 space_2];
-@UC_3 = [A_3 B_3 C_3 D_3 E_3 F_3 G_3 H_3 I_3 J_3 K_3 L_3 M_3 N_3 O_3 P_3 Q_3 R_3 S_3 T_3 U_3 V_3 W_3 X_3 Y_3 Z_3 space_3];
 
-feature calt
+# only characters that actually have 3 versions
+@UC_1_gotTHREE = [A B C D E F G H I J K L M O P Q R S T V W X Y Z space];
+@UC_2_gotTHREE = [A_2 B_2 C_2 D_2 E_2 F_2 G_2 H_2 I_2 J_2 K_2 L_2 M_2 O_2 P_2 Q_2 R_2 S_2 T_2 V_2 W_2 X_2 Y_2 Z_2 space_2];
+@UC_3_gotTHREE = [A_3 B_3 C_3 D_3 E_3 F_3 G_3 H_3 I_3 J_3 K_3 L_3 M_3 O_3 P_3 Q_3 R_3 S_3 T_3 V_3 W_3 X_3 Y_3 Z_3 space_3];
+
+# characters with only two options
+@UC_1_onlyTWO = [N U];
+@UC_2_onlyTWO = [N_2 U_2];
+
+# context classes
+@UC_ALL_1 = [@UC_1_gotTHREE @UC_1_onlyTWO];
+@UC_ALL_2 = [@UC_2_gotTHREE @UC_2_onlyTWO];
+@UC_ALL_3 = [@UC_3_gotTHREE];
+#------------------------------------------------------------
+
+# Contextual Alternates
+#------------------------------------------------------------
+feature calt 
 {
-  sub @LC by @UC;
+  # GLYPH SUBSTITUTION
+  # lowercase to uppercase
+  sub @LC by @UC_1;
 
-  sub @UC @UC' by @UC_2;
-  sub @UC_2 @UC' by @UC_3;
-  sub @UC_3 @UC' by @UC;
+  # GLYPH CYCLING
+  # three-version letters: base -> _2 -> _3 -> base
+  sub @UC_ALL_1 @UC_1_gotTHREE' by @UC_2_gotTHREE;
+  sub @UC_ALL_2 @UC_1_gotTHREE' by @UC_3_gotTHREE;
+  sub @UC_ALL_3 @UC_1_gotTHREE' by @UC_1_gotTHREE;
+
+  # two-version letters: base -> _2 -> base
+  sub @UC_ALL_1 @UC_1_onlyTWO' by @UC_2_onlyTWO;
+  sub @UC_ALL_2 @UC_1_onlyTWO' by @UC_1_onlyTWO;
 } calt;
+#------------------------------------------------------------
 
+# ALTERNATES
+#------------------------------------------------------------
+feature aalt 
+{
+  sub A from [A A_2 A_3];
+  sub B from [B B_2 B_3];
+  sub C from [C C_2 C_3];
+  sub D from [D D_2 D_3];
+  sub E from [E E_2 E_3];
+  sub F from [F F_2 F_3];
+  sub G from [G G_2 G_3];
+  sub H from [H H_2 H_3];
+  sub I from [I I_2 I_3];
+  sub J from [J J_2 J_3];
+  sub K from [K K_2 K_3];
+  sub L from [L L_2 L_3];
+  sub M from [M M_2 M_3];
+  sub N from [N N_2];
+  sub O from [O O_2 O_3];
+  sub P from [P P_2 P_3];
+  sub Q from [Q Q_2 Q_3];
+  sub R from [R R_2 R_3];
+  sub S from [S S_2 S_3];
+  sub T from [T T_2 T_3];
+  sub U from [U U_2];
+  sub V from [V V_2 V_3];
+  sub W from [W W_2 W_3];
+  sub X from [X X_2 X_3];
+  sub Y from [Y Y_2 Y_3];
+  sub Z from [Z Z_2 Z_3];
+} aalt;
+#------------------------------------------------------------
