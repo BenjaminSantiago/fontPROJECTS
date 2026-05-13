@@ -57,6 +57,8 @@
     </dict>
     <key>E</key>
     <dict>
+      <key>E_2</key>
+      <integer>-57</integer>
       <key>F_2</key>
       <integer>-64</integer>
       <key>R</key>
@@ -70,8 +72,12 @@
     <dict>
       <key>D_3</key>
       <integer>-102</integer>
+      <key>E_3</key>
+      <integer>-179</integer>
       <key>F_3</key>
       <integer>-40</integer>
+      <key>M_3</key>
+      <integer>-178</integer>
       <key>O_3</key>
       <integer>-56</integer>
       <key>R_3</key>
@@ -83,6 +89,8 @@
     <dict>
       <key>R</key>
       <integer>-24</integer>
+      <key>S</key>
+      <integer>-36</integer>
     </dict>
     <key>F</key>
     <dict>
