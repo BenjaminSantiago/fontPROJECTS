@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<designspace format="5.0">
+  <axes>
+    <axis tag="PNTY" name="POINTY-NESS" minimum="0" maximum="1000" default="0"/>
+  </axes>
+  <sources>
+    <source filename="KAWAII__v02_BASIC.ufo" name="m01" familyname="KAWAII__v03" stylename="BASIC">
+      <location>
+        <dimension name="POINTY-NESS" xvalue="0"/>
+      </location>
+    </source>
+    <source filename="KAWAII__v02_POINT.ufo" name="A059687C-1D73-482F-9FFB-016E13DAD43B" familyname="KAWAII__v03" stylename="POINT">
+      <location>
+        <dimension name="POINTY-NESS" xvalue="1000"/>
+      </location>
+    </source>
+  </sources>
+</designspace>
