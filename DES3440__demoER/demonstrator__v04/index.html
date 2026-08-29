@@ -1,0 +1,2041 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Demonstrator — Motion Typesetter</title>
+  <style>
+    @font-face {
+      font-family: "Demonstrator";
+      src: url("./__font/demonstrator__v06.woff2") format("woff2");
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: "Iosevka Term Extended";
+      src: url("./__font/IosevkaTerm-Extended.woff2") format("woff2");
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+    }
+
+    :root {
+      --ink: #11110f;
+      --paper: #f1f0e8;
+      --panel: #dad9d0;
+      --line: #11110f;
+      --acid: #ccff00;
+      --muted: #6d6c65;
+      color-scheme: light;
+      font-family: Arial, Helvetica, sans-serif;
+      font-synthesis: none;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body { min-height: 100%; }
+
+    body {
+      margin: 0;
+      background: var(--ink);
+      color: var(--ink);
+      overflow-x: hidden;
+    }
+
+    button, input, textarea, select { font: inherit; }
+    button, select, input[type="color"] { cursor: pointer; }
+
+    .app {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: minmax(350px, 430px) minmax(0, 1fr);
+    }
+
+    .controls {
+      position: relative;
+      z-index: 2;
+      min-height: 100vh;
+      background: var(--paper);
+      border-right: 2px solid var(--line);
+    }
+
+    .brand {
+      position: sticky;
+      top: 0;
+      z-index: 4;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 16px;
+      align-items: start;
+      padding: 18px 20px 16px;
+      background: var(--acid);
+      border-bottom: 2px solid var(--line);
+    }
+
+    .brand h1 {
+      margin: 0;
+      font-family: "Arial Narrow", Arial, sans-serif;
+      font-size: clamp(28px, 4vw, 42px);
+      line-height: .82;
+      letter-spacing: -.07em;
+      text-transform: uppercase;
+    }
+
+    .version {
+      padding: 5px 7px 4px;
+      color: var(--acid);
+      background: var(--ink);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .08em;
+    }
+
+    .control-scroll { padding-bottom: 140px; }
+
+    .section {
+      padding: 18px 20px 20px;
+      border-bottom: 2px solid var(--line);
+    }
+
+    .section-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin: 0 0 14px;
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+
+    .section-title span:last-child {
+      color: var(--muted);
+      font-weight: 600;
+      letter-spacing: .05em;
+    }
+
+    label.field {
+      display: grid;
+      gap: 7px;
+      margin-top: 14px;
+    }
+
+    .field-label {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+    }
+
+    textarea, select, input[type="number"], input[type="text"] {
+      width: 100%;
+      border: 1.5px solid var(--line);
+      border-radius: 0;
+      background: #fff;
+      color: var(--ink);
+      outline: none;
+    }
+
+    textarea:focus, select:focus, input:focus-visible { box-shadow: 0 0 0 3px var(--acid); }
+
+    textarea {
+      min-height: 118px;
+      resize: vertical;
+      padding: 10px 11px;
+      line-height: 1.3;
+    }
+
+    select, input[type="number"], input[type="text"] {
+      min-height: 38px;
+      padding: 7px 9px;
+    }
+
+    .segmented {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border: 1.5px solid var(--line);
+      background: var(--line);
+      gap: 1.5px;
+    }
+
+    .segmented button {
+      min-height: 38px;
+      border: 0;
+      background: #fff;
+      color: var(--ink);
+      font-size: 11px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .segmented button[aria-pressed="true"] { background: var(--ink); color: var(--acid); }
+
+    .two-up {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .three-up {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .color-field {
+      display: grid;
+      grid-template-columns: 42px 1fr;
+      min-height: 42px;
+      border: 1.5px solid var(--line);
+      background: #fff;
+    }
+
+    .color-field input[type="color"] {
+      width: 42px;
+      height: 100%;
+      padding: 0;
+      border: 0;
+      border-right: 1.5px solid var(--line);
+      background: transparent;
+    }
+
+    .color-field output {
+      align-self: center;
+      padding: 0 10px;
+      font: 700 12px/1 monospace;
+      text-transform: uppercase;
+    }
+
+    .axis-card {
+      margin-top: 10px;
+      border: 1.5px solid var(--line);
+      background: #fff;
+    }
+
+    .axis-head {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 10px;
+      align-items: center;
+      padding: 9px 10px;
+      border-bottom: 1.5px solid var(--line);
+    }
+
+    .axis-tag {
+      padding: 4px 6px;
+      background: var(--ink);
+      color: var(--acid);
+      font: 800 12px/1 monospace;
+    }
+
+    .axis-name { font-size: 12px; font-weight: 800; }
+    .axis-range { color: var(--muted); font: 700 10px/1 monospace; }
+
+    .axis-body { padding: 10px; }
+
+    .axis-row {
+      display: grid;
+      grid-template-columns: 36px 1fr 54px;
+      gap: 8px;
+      align-items: center;
+      min-height: 34px;
+    }
+
+    .axis-row label {
+      font-size: 10px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    input[type="range"] {
+      width: 100%;
+      accent-color: var(--ink);
+    }
+
+    .axis-row output {
+      padding: 6px 5px;
+      border: 1px solid var(--line);
+      font: 700 11px/1 monospace;
+      text-align: right;
+    }
+
+    .mode-button {
+      width: 100%;
+      margin-top: 8px;
+      padding: 8px;
+      border: 1.5px solid var(--line);
+      background: var(--acid);
+      color: var(--ink);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .mode-button[data-mode="static"] { background: var(--panel); }
+    .mode-button[data-mode="pingpong"] { background: #fff; }
+    .axis-card.is-static .end-row { opacity: .35; }
+
+    .field-note {
+      margin: 8px 0 0;
+      color: var(--muted);
+      font: 700 10px/1.4 monospace;
+    }
+
+    .action-bar {
+      position: sticky;
+      bottom: 0;
+      z-index: 5;
+      padding: 14px 20px 18px;
+      background: var(--paper);
+      border-top: 2px solid var(--line);
+    }
+
+    .export-button {
+      width: 100%;
+      min-height: 54px;
+      border: 2px solid var(--line);
+      background: var(--acid);
+      color: var(--ink);
+      font-size: 14px;
+      font-weight: 900;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      box-shadow: 5px 5px 0 var(--ink);
+    }
+
+    .export-button:hover { transform: translate(-2px, -2px); box-shadow: 7px 7px 0 var(--ink); }
+    .export-button:active { transform: translate(3px, 3px); box-shadow: 2px 2px 0 var(--ink); }
+    .export-button:disabled { cursor: wait; opacity: .65; transform: none; box-shadow: none; }
+
+    .status {
+      min-height: 14px;
+      margin: 10px 0 0;
+      color: var(--muted);
+      font: 700 10px/1.35 monospace;
+      text-align: center;
+    }
+
+    .preview-pane {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      min-height: 620px;
+      display: grid;
+      grid-template-rows: auto 1fr;
+      background: #242421;
+      color: #fff;
+      overflow: hidden;
+    }
+
+    .preview-toolbar {
+      min-height: 58px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding: 10px 18px;
+      border-bottom: 1px solid #45453f;
+    }
+
+    .preview-meta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #aaa99f;
+      font: 700 11px/1 monospace;
+      text-transform: uppercase;
+    }
+
+    .live-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--acid);
+      box-shadow: 0 0 0 4px rgba(204,255,0,.12);
+    }
+
+    .preview-actions { display: flex; gap: 8px; }
+
+    .preview-actions button {
+      min-height: 34px;
+      padding: 0 11px;
+      border: 1px solid #77776f;
+      background: transparent;
+      color: #fff;
+      font-size: 10px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .stage {
+      position: relative;
+      display: grid;
+      place-items: center;
+      min-height: 0;
+      padding: 30px;
+      overflow: hidden;
+    }
+
+    .stage-frame {
+      position: relative;
+      flex: none;
+      box-shadow: 0 22px 70px rgba(0,0,0,.48);
+      overflow: hidden;
+    }
+
+    .artboard {
+      position: absolute;
+      inset: 0 auto auto 0;
+      width: 1080px;
+      height: 1080px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      transform-origin: 0 0;
+      background: #111111;
+      color: #f4f2e8;
+    }
+
+    .artboard-text {
+      width: 100%;
+      margin: 0;
+      padding: 110px;
+      white-space: pre-wrap;
+      overflow-wrap: normal;
+      word-break: normal;
+      font-family: "Demonstrator", sans-serif;
+      font-size: 170px;
+      font-weight: 400;
+      font-style: normal;
+      line-height: .88;
+      letter-spacing: 0;
+      text-align: center;
+      text-align-last: auto;
+      text-rendering: geometricPrecision;
+    }
+
+    .artboard-line { white-space: pre-wrap; }
+    .artboard-glyph { display: inline; }
+
+    .format-flag {
+      position: absolute;
+      right: 14px;
+      bottom: 14px;
+      padding: 6px 7px;
+      background: rgba(17,17,15,.88);
+      color: #fff;
+      font: 700 10px/1 monospace;
+      pointer-events: none;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    /* Professor Benjamin UI system: one outer structure, shared table rules. */
+    :root {
+      --bg: #000000;
+      --fg: #ffffff;
+      --color__01: #00ffff;
+      --color__02: #ff00ff;
+      --color__03: #ffff00;
+      --color__04: #00ff00;
+      --ink: var(--fg);
+      --paper: var(--bg);
+      --panel: #141414;
+      --line: var(--color__02);
+      --acid: var(--color__03);
+      --muted: #a2a2a2;
+      color-scheme: dark;
+      font-family: "Iosevka Term Extended", monospace;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--fg);
+      font-family: "Iosevka Term Extended", monospace;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    button, input, textarea, select { font-family: inherit; }
+
+    button:focus-visible,
+    input:focus-visible,
+    textarea:focus-visible,
+    select:focus-visible {
+      outline: 2px solid var(--color__03);
+      outline-offset: -3px;
+      box-shadow: none;
+    }
+
+    .app { grid-template-columns: minmax(420px, 510px) minmax(0, 1fr); }
+
+    .controls {
+      background: var(--bg);
+      border-right: 1px solid var(--color__02);
+    }
+
+    .brand {
+      padding: 16px;
+      background: var(--bg);
+      border-bottom: 1px solid var(--color__02);
+    }
+
+    .brand h1 {
+      color: var(--color__01);
+      font-family: "Iosevka Term Extended", monospace;
+      font-size: clamp(28px, 3.6vw, 48px);
+      font-weight: 400;
+      line-height: .9;
+      letter-spacing: .08em;
+    }
+
+    .version {
+      padding: 6px 8px;
+      color: var(--bg);
+      background: var(--color__02);
+      font-weight: 400;
+    }
+
+    .state-strip {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      border-top: 1px solid var(--color__02);
+    }
+
+    .state-tabs {
+      display: flex;
+      min-width: 0;
+      overflow-x: auto;
+    }
+
+    .state-tabs button,
+    .state-actions button {
+      min-width: 52px;
+      min-height: 44px;
+      margin: 0;
+      padding: 8px 10px;
+      border: 0;
+      border-radius: 0;
+      color: var(--color__01);
+      background: var(--bg);
+      font: inherit;
+      text-transform: uppercase;
+    }
+
+    .state-tabs button + button,
+    .state-actions button + button { border-left: 1px solid var(--color__02); }
+    .state-tabs button[aria-pressed="true"] { color: var(--bg); background: var(--color__01); }
+    .state-tabs button:is(:hover, :focus-visible),
+    .state-actions button:is(:hover, :focus-visible) { color: var(--bg); background: var(--color__03); }
+
+    .state-actions {
+      display: grid;
+      grid-template-columns: repeat(3, auto);
+      border-left: 1px solid var(--color__02);
+    }
+
+    .line-size-table { border-top: 1px solid var(--color__02); }
+
+    .line-size-head,
+    .line-size-row {
+      display: grid;
+      grid-template-columns: 64px minmax(0, 1fr) 86px;
+      align-items: stretch;
+    }
+
+    .line-size-head {
+      min-height: 34px;
+      color: var(--color__02);
+      font-size: 10px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .line-size-row { min-height: 42px; border-top: 1px solid var(--color__02); }
+
+    .line-size-head > *,
+    .line-size-row > * {
+      display: flex;
+      min-width: 0;
+      align-items: center;
+      padding: 8px 10px;
+    }
+
+    .line-size-head > * + *,
+    .line-size-row > * + * { border-left: 1px solid var(--color__02); }
+    .line-size-index { color: var(--color__01); }
+    .line-size-copy { overflow: hidden; color: var(--fg); text-overflow: ellipsis; white-space: nowrap; }
+
+    .line-size-row input[type="number"] {
+      width: 100%;
+      min-height: 41px;
+      padding: 8px;
+      border: 0;
+      color: var(--bg);
+      background: var(--color__02);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .section {
+      padding: 0;
+      border-bottom: 1px solid var(--color__02);
+    }
+
+    .section-title {
+      min-height: 44px;
+      margin: 0;
+      padding: 12px 14px;
+      color: var(--color__02);
+      background: var(--bg);
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: .1em;
+    }
+
+    .section-title span:last-child {
+      color: var(--color__04);
+      font-weight: 400;
+    }
+
+    label.field,
+    .section > .field {
+      margin: 0;
+      gap: 0;
+    }
+
+    .section > label.field,
+    .section > .field {
+      display: grid;
+      grid-template-columns: minmax(128px, .34fr) minmax(0, 1fr);
+      border-top: 1px solid var(--color__02);
+    }
+
+    .section > label.field > .field-label,
+    .section > .field > .field-label {
+      display: flex;
+      align-items: center;
+      min-width: 0;
+      padding: 11px 12px;
+      border-right: 1px solid var(--color__02);
+      color: var(--color__01);
+    }
+
+    .field-label {
+      color: var(--color__01);
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: .08em;
+    }
+
+    textarea,
+    select,
+    input[type="number"],
+    input[type="text"] {
+      min-height: 44px;
+      padding: 10px 12px;
+      border: 0;
+      border-radius: 0;
+      color: var(--fg);
+      background: var(--bg);
+    }
+
+    textarea {
+      min-height: 126px;
+      line-height: 1.35;
+    }
+
+    .segmented {
+      border: 0;
+      gap: 0;
+      background: var(--bg);
+    }
+
+    .segmented button {
+      min-height: 44px;
+      color: var(--color__01);
+      background: var(--bg);
+      font-weight: 400;
+    }
+
+    .segmented button + button { border-left: 1px solid var(--color__02); }
+    .segmented button[aria-pressed="true"] { color: var(--bg); background: var(--color__01); }
+    .segmented button:is(:hover, :focus-visible) { color: var(--bg); background: var(--color__03); }
+
+    .two-up,
+    .three-up {
+      gap: 0;
+      border-top: 1px solid var(--color__02);
+    }
+
+    .two-up .field,
+    .three-up .field {
+      display: grid;
+      grid-template-rows: auto 1fr;
+      align-content: stretch;
+      margin: 0;
+      min-width: 0;
+    }
+
+    .two-up .field + .field,
+    .three-up .field + .field { border-left: 1px solid var(--color__02); }
+
+    .two-up .field-label,
+    .three-up .field-label {
+      padding: 8px 10px;
+      border-bottom: 1px solid var(--color__02);
+      text-align: center;
+    }
+
+    .color-field {
+      min-height: 44px;
+      border: 0;
+      background: var(--bg);
+    }
+
+    .color-field input[type="color"] { border-right: 1px solid var(--color__02); }
+    .color-field output { color: var(--fg); font-weight: 400; }
+
+    .axis-card {
+      display: grid;
+      grid-template-columns: minmax(122px, .3fr) minmax(0, 1fr);
+      margin: 0;
+      border: 0;
+      border-top: 1px solid var(--color__02);
+      background: var(--bg);
+    }
+
+    .axis-head {
+      display: grid;
+      grid-template-columns: 1fr;
+      align-content: center;
+      align-items: start;
+      gap: 7px;
+      padding: 12px;
+      border: 0;
+      border-right: 1px solid var(--color__02);
+    }
+
+    .axis-tag {
+      justify-self: start;
+      padding: 4px 6px;
+      color: var(--bg);
+      background: var(--color__01);
+      font-weight: 400;
+    }
+
+    .axis-name { color: var(--fg); font-size: 11px; font-weight: 400; }
+    .axis-range { color: var(--color__04); font-weight: 400; }
+    .axis-body { padding: 0; }
+
+    .axis-row {
+      grid-template-columns: 54px minmax(0, 1fr) 58px;
+      gap: 0;
+      min-height: 42px;
+      border-bottom: 1px solid var(--color__02);
+    }
+
+    .axis-row label {
+      align-self: stretch;
+      display: grid;
+      place-items: center start;
+      padding: 8px 9px;
+      border-right: 1px solid var(--color__02);
+      color: var(--color__01);
+      font-weight: 400;
+    }
+
+    input[type="range"] {
+      margin: 0;
+      padding: 8px 10px;
+      accent-color: var(--color__01);
+      background: var(--bg);
+    }
+
+    .axis-row output {
+      display: grid;
+      place-items: center;
+      padding: 8px;
+      border: 0;
+      border-left: 1px solid var(--color__02);
+      color: var(--bg);
+      background: var(--color__02);
+      font-weight: 400;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .mode-button {
+      min-height: 42px;
+      margin: 0;
+      padding: 9px 10px;
+      border: 0;
+      border-radius: 0;
+      color: var(--bg);
+      background: var(--color__01);
+      font-weight: 400;
+    }
+
+    .mode-button[data-mode="pingpong"] { color: var(--bg); background: var(--color__03); }
+    .mode-button[data-mode="static"] { color: var(--bg); background: var(--color__02); }
+    .mode-button:is(:hover, :focus-visible) { color: var(--bg); background: var(--color__04); }
+
+    .field-note {
+      margin: 0;
+      padding: 10px 12px;
+      border-top: 1px solid var(--color__02);
+      color: var(--color__04);
+      font-weight: 400;
+    }
+
+    .action-bar {
+      padding: 0;
+      background: var(--bg);
+      border-top: 1px solid var(--color__02);
+    }
+
+    .export-button {
+      min-height: 56px;
+      border: 0;
+      border-radius: 0;
+      color: var(--bg);
+      background: var(--color__02);
+      font-weight: 400;
+      box-shadow: none;
+    }
+
+    .export-button:hover,
+    .export-button:active {
+      color: var(--bg);
+      background: var(--color__03);
+      transform: none;
+      box-shadow: none;
+    }
+
+    .status {
+      min-height: 34px;
+      margin: 0;
+      padding: 9px 12px;
+      border-top: 1px solid var(--color__02);
+      color: var(--color__04);
+      font-weight: 400;
+    }
+
+    .preview-pane { color: var(--fg); background: var(--bg); }
+
+    .preview-toolbar {
+      min-height: 56px;
+      padding: 0 0 0 14px;
+      border-bottom: 1px solid var(--color__02);
+      background: var(--bg);
+    }
+
+    .preview-meta { color: var(--color__01); font-weight: 400; }
+    .live-dot { background: var(--color__04); box-shadow: none; }
+
+    .preview-actions {
+      align-self: stretch;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0;
+      border-left: 1px solid var(--color__02);
+    }
+
+    .preview-actions button {
+      min-height: 55px;
+      padding: 0 14px;
+      border: 0;
+      color: var(--color__01);
+      background: var(--bg);
+      font-weight: 400;
+    }
+
+    .preview-actions button + button { border-left: 1px solid var(--color__02); }
+    .preview-actions button:is(:hover, :focus-visible) { color: var(--bg); background: var(--color__03); }
+
+    .stage {
+      background-color: var(--bg);
+      background-image: none;
+    }
+
+    .stage-frame {
+      border: 1px solid var(--color__02);
+      box-shadow: none;
+    }
+
+    .format-flag {
+      right: 0;
+      bottom: 0;
+      padding: 7px 9px;
+      border-top: 1px solid var(--color__02);
+      border-left: 1px solid var(--color__02);
+      color: var(--color__04);
+      background: var(--bg);
+      font-weight: 400;
+    }
+
+    @media (max-width: 840px) {
+      .app { display: block; }
+      .controls { min-height: 0; border-right: 0; }
+      .preview-pane { position: relative; height: min(78vh, 760px); min-height: 520px; }
+      .brand { position: relative; }
+      .action-bar { position: relative; }
+      .control-scroll { padding-bottom: 0; }
+    }
+
+    @media (max-width: 460px) {
+      .section > label.field,
+      .section > .field,
+      .two-up,
+      .three-up,
+      .axis-card { grid-template-columns: 1fr; }
+
+      .section > label.field > .field-label,
+      .section > .field > .field-label,
+      .axis-head {
+        border-right: 0;
+        border-bottom: 1px solid var(--color__02);
+      }
+
+      .two-up .field + .field,
+      .three-up .field + .field {
+        border-top: 1px solid var(--color__02);
+        border-left: 0;
+      }
+
+      .axis-head { grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; }
+      .state-strip { grid-template-columns: 1fr; }
+      .state-actions { border-top: 1px solid var(--color__02); border-left: 0; }
+      .state-actions button { width: 100%; }
+      .stage { padding: 18px; }
+      .preview-toolbar { padding-left: 12px; padding-right: 0; }
+      .preview-meta span:last-child { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <main class="app">
+    <aside class="controls" aria-label="Typography controls">
+      <header class="brand">
+        <h1>Motion<br>Typesetter</h1>
+        <span class="version">DEMO·04</span>
+      </header>
+
+      <div class="control-scroll">
+        <section class="section state-section">
+          <h2 class="section-title"><span>00 / States</span><span id="stateSequenceSummary">1 state · 6 sec</span></h2>
+          <div class="state-strip">
+            <div class="state-tabs" id="stateTabs" role="tablist" aria-label="Animation states"></div>
+            <div class="state-actions">
+              <button id="addState" type="button" title="Add a blank state">Add</button>
+              <button id="duplicateState" type="button" title="Duplicate selected state">Copy</button>
+              <button id="deleteState" type="button" title="Delete selected state">Del</button>
+            </div>
+          </div>
+          <p class="field-note">States export left → right. Export loops repeat the complete sequence.</p>
+        </section>
+
+        <section class="section">
+          <h2 class="section-title"><span>01 / Message</span><span>Set the words</span></h2>
+          <label class="field">
+            <span class="field-label">Text</span>
+            <textarea id="message" spellcheck="false">TRANSLATE
+THE FORM</textarea>
+          </label>
+          <div class="field">
+            <span class="field-label">Alignment</span>
+            <div class="segmented" id="alignment" role="group" aria-label="Text alignment">
+              <button type="button" data-align="left" aria-pressed="false">Left</button>
+              <button type="button" data-align="center" aria-pressed="true">Center</button>
+              <button type="button" data-align="right" aria-pressed="false">Right</button>
+              <button type="button" data-align="justify" aria-pressed="false">Justify</button>
+            </div>
+          </div>
+          <div class="line-size-table">
+            <div class="line-size-head" aria-hidden="true"><span>Line</span><span>Phrase</span><span>Size px</span></div>
+            <div id="lineSizeRows"></div>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2 class="section-title"><span>02 / Canvas</span><span>IG-native sizes</span></h2>
+          <label class="field">
+            <span class="field-label">Format</span>
+            <select id="format">
+              <option value="post">Instagram Post · 1080 × 1080</option>
+              <option value="reel">Instagram Reel · 1080 × 1920</option>
+              <option value="landscape">HD Landscape · 1920 × 1080</option>
+            </select>
+          </label>
+          <div class="two-up">
+            <label class="field">
+              <span class="field-label">Text color</span>
+              <span class="color-field">
+                <input id="textColor" type="color" value="#f4f2e8" aria-label="Text color">
+                <output for="textColor">#F4F2E8</output>
+              </span>
+            </label>
+            <label class="field">
+              <span class="field-label">Background</span>
+              <span class="color-field">
+                <input id="bgColor" type="color" value="#111111" aria-label="Background color">
+                <output for="bgColor">#111111</output>
+              </span>
+            </label>
+          </div>
+          <div class="three-up">
+            <label class="field">
+              <span class="field-label">All-lines size</span>
+              <input id="fontSize" type="number" min="24" max="600" step="1" value="170">
+            </label>
+            <label class="field">
+              <span class="field-label">Line height</span>
+              <input id="lineHeight" type="number" min="0.5" max="2" step="0.01" value="0.88">
+            </label>
+            <label class="field">
+              <span class="field-label">Margin</span>
+              <input id="padding" type="number" min="0" max="400" step="1" value="110">
+            </label>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2 class="section-title"><span>03 / Variable axes</span><span>Start → end</span></h2>
+
+          <article class="axis-card" data-axis="ROTA">
+            <header class="axis-head">
+              <span class="axis-tag">ROTA</span>
+              <span class="axis-name">Rotation</span>
+              <span class="axis-range">0—90</span>
+            </header>
+            <div class="axis-body">
+              <div class="axis-row">
+                <label for="rotaStart">Start</label>
+                <input id="rotaStart" type="range" min="0" max="90" step="1" value="0">
+                <output for="rotaStart">0</output>
+              </div>
+              <div class="axis-row end-row">
+                <label for="rotaEnd">End</label>
+                <input id="rotaEnd" type="range" min="0" max="90" step="1" value="90">
+                <output for="rotaEnd">90</output>
+              </div>
+              <button class="mode-button" type="button" data-mode="forward">Mode: forward · click for ping-pong</button>
+            </div>
+          </article>
+
+          <article class="axis-card" data-axis="FRWI">
+            <header class="axis-head">
+              <span class="axis-tag">FRWI</span>
+              <span class="axis-name">Fragment width</span>
+              <span class="axis-range">10—100</span>
+            </header>
+            <div class="axis-body">
+              <div class="axis-row">
+                <label for="frwiStart">Start</label>
+                <input id="frwiStart" type="range" min="10" max="100" step="1" value="10">
+                <output for="frwiStart">10</output>
+              </div>
+              <div class="axis-row end-row">
+                <label for="frwiEnd">End</label>
+                <input id="frwiEnd" type="range" min="10" max="100" step="1" value="100">
+                <output for="frwiEnd">100</output>
+              </div>
+              <button class="mode-button" type="button" data-mode="forward">Mode: forward · click for ping-pong</button>
+            </div>
+          </article>
+        </section>
+
+        <section class="section">
+          <h2 class="section-title"><span>04 / Timing</span><span id="timingSummary">1 loop · 6 sec</span></h2>
+          <div class="two-up">
+            <label class="field">
+              <span class="field-label">Loop length · seconds</span>
+              <input id="duration" type="number" min="1" max="30" step="0.5" value="6">
+            </label>
+            <label class="field">
+              <span class="field-label">Export frame rate</span>
+              <select id="fps">
+                <option value="24">24 fps</option>
+                <option value="30" selected>30 fps</option>
+                <option value="60">60 fps</option>
+              </select>
+            </label>
+          </div>
+          <div class="two-up">
+            <label class="field">
+              <span class="field-label">Motion FPS · frame holds</span>
+              <input id="motionFps" type="number" min="1" max="30" step="1" value="30">
+            </label>
+            <label class="field">
+              <span class="field-label">Number of loops</span>
+              <input id="loops" type="number" min="1" max="20" step="1" value="1">
+            </label>
+          </div>
+          <div class="two-up">
+            <label class="field">
+              <span class="field-label">Line stagger · frames</span>
+              <input id="staggerFrames" type="number" min="0" max="600" step="1" value="0">
+            </label>
+            <label class="field">
+              <span class="field-label">Letter stagger · frames</span>
+              <input id="letterStaggerFrames" type="number" min="0" max="600" step="1" value="0">
+            </label>
+          </div>
+          <div class="two-up">
+            <label class="field">
+              <span class="field-label">Letter choreography</span>
+              <select id="letterChoreography">
+                <option value="cascade" selected>Cascade / stagger</option>
+                <option value="focus">Traveling focus</option>
+              </select>
+            </label>
+            <label class="field">
+              <span class="field-label">Focus travel</span>
+              <select id="focusTravel">
+                <option value="forward" selected>Forward across message</option>
+                <option value="pingpong">Forward + back</option>
+              </select>
+            </label>
+          </div>
+          <label class="field">
+            <span class="field-label">Focus influence / surrounding letters</span>
+            <input id="focusRadius" type="number" min="0" max="40" step="0.5" value="3">
+          </label>
+          <div class="two-up">
+            <label class="field">
+              <span class="field-label">Focus easing family</span>
+              <select id="focusEasingType">
+                <option value="linear">Linear</option>
+                <option value="quadratic">Quadratic</option>
+                <option value="cubic" selected>Cubic</option>
+                <option value="exponential">Exponential</option>
+              </select>
+            </label>
+            <label class="field">
+              <span class="field-label">Overall easing / percent</span>
+              <input id="focusEasingAmount" type="number" min="0" max="100" step="1" value="100">
+            </label>
+          </div>
+          <div class="two-up">
+            <label class="field">
+              <span class="field-label">Ease in / percent</span>
+              <input id="focusEaseIn" type="number" min="0" max="100" step="1" value="100">
+            </label>
+            <label class="field">
+              <span class="field-label">Ease out / percent</span>
+              <input id="focusEaseOut" type="number" min="0" max="100" step="1" value="100">
+            </label>
+          </div>
+          <p class="field-note">Cascade uses the line and letter frame offsets. Traveling focus crosses every character in the message; influence sets its soft neighborhood. Focus easing affects only that travel, never Cascade or axis timing. Static axes stay fixed.</p>
+        </section>
+      </div>
+
+      <footer class="action-bar">
+        <button id="exportButton" class="export-button" type="button">Export H.264 MP4</button>
+        <p id="status" class="status" role="status" aria-live="polite">Ready · export happens locally in your browser</p>
+      </footer>
+    </aside>
+
+    <section class="preview-pane" aria-label="Live preview">
+      <header class="preview-toolbar">
+        <div class="preview-meta"><span class="live-dot"></span><span>Live preview</span><span id="axisReadout">ROTA 0 · FRWI 10</span></div>
+        <div class="preview-actions">
+          <button id="playPause" type="button">Pause</button>
+          <button id="restart" type="button">Restart</button>
+        </div>
+      </header>
+      <div class="stage" id="stage">
+        <div class="stage-frame" id="stageFrame">
+          <div class="artboard" id="artboard">
+            <div class="artboard-text" id="previewText"><div class="artboard-line">TRANSLATE</div><div class="artboard-line">THE FORM</div></div>
+          </div>
+          <span class="format-flag" id="formatFlag">POST · 1080²</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <canvas id="renderCanvas" class="sr-only" width="1080" height="1080" aria-hidden="true"></canvas>
+  <script src="./vendor/mp4-muxer.js"></script>
+  <script>
+    "use strict";
+
+    const FONT_BASE64 = "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";
+    const FONT_DATA_URL = `data:font/woff2;base64,${FONT_BASE64}`;
+    const STORAGE_KEY = "demonstrator-motion-typesetter-v04";
+    const FORMATS = {
+      post: { width: 1080, height: 1080, bitrate: 8000000, label: "POST · 1080²" },
+      reel: { width: 1080, height: 1920, bitrate: 12000000, label: "REEL · 1080×1920" },
+      landscape: { width: 1920, height: 1080, bitrate: 12000000, label: "LANDSCAPE · 1920×1080" }
+    };
+
+    const els = {
+      message: document.querySelector("#message"),
+      lineSizeRows: document.querySelector("#lineSizeRows"),
+      stateTabs: document.querySelector("#stateTabs"),
+      addState: document.querySelector("#addState"),
+      duplicateState: document.querySelector("#duplicateState"),
+      deleteState: document.querySelector("#deleteState"),
+      stateSequenceSummary: document.querySelector("#stateSequenceSummary"),
+      alignment: document.querySelector("#alignment"),
+      format: document.querySelector("#format"),
+      textColor: document.querySelector("#textColor"),
+      bgColor: document.querySelector("#bgColor"),
+      fontSize: document.querySelector("#fontSize"),
+      lineHeight: document.querySelector("#lineHeight"),
+      padding: document.querySelector("#padding"),
+      duration: document.querySelector("#duration"),
+      fps: document.querySelector("#fps"),
+      motionFps: document.querySelector("#motionFps"),
+      loops: document.querySelector("#loops"),
+      staggerFrames: document.querySelector("#staggerFrames"),
+      letterStaggerFrames: document.querySelector("#letterStaggerFrames"),
+      letterChoreography: document.querySelector("#letterChoreography"),
+      focusTravel: document.querySelector("#focusTravel"),
+      focusRadius: document.querySelector("#focusRadius"),
+      focusEasingType: document.querySelector("#focusEasingType"),
+      focusEasingAmount: document.querySelector("#focusEasingAmount"),
+      focusEaseIn: document.querySelector("#focusEaseIn"),
+      focusEaseOut: document.querySelector("#focusEaseOut"),
+      timingSummary: document.querySelector("#timingSummary"),
+      previewText: document.querySelector("#previewText"),
+      artboard: document.querySelector("#artboard"),
+      stage: document.querySelector("#stage"),
+      stageFrame: document.querySelector("#stageFrame"),
+      formatFlag: document.querySelector("#formatFlag"),
+      axisReadout: document.querySelector("#axisReadout"),
+      playPause: document.querySelector("#playPause"),
+      restart: document.querySelector("#restart"),
+      exportButton: document.querySelector("#exportButton"),
+      status: document.querySelector("#status"),
+      canvas: document.querySelector("#renderCanvas")
+    };
+
+    const axisCards = [...document.querySelectorAll(".axis-card")];
+    let alignment = "center";
+    let isPlaying = true;
+    let previewStart = performance.now();
+    let pausedProgress = 0;
+    let isExporting = false;
+    let lineSizes = [170, 170];
+    let states = [];
+    let activeStateIndex = 0;
+    let isHydratingState = false;
+    let previewLineSignature = "";
+    const focusLayoutCache = new WeakMap();
+
+    function clamp(value, min, max) {
+      return Math.min(max, Math.max(min, Number(value)));
+    }
+
+    function ease(progress) {
+      return progress < 0.5
+        ? 4 * progress * progress * progress
+        : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+    }
+
+    function focusEasingCurve(type, progress) {
+      const value = clamp(progress, 0, 1);
+      if (type === "quadratic") return value * value;
+      if (type === "cubic") return value * value * value;
+      if (type === "exponential") return value === 0 ? 0 : Math.pow(2, 10 * value - 10);
+      return value;
+    }
+
+    function focusEasedLeg(config, progress) {
+      const linear = clamp(progress, 0, 1);
+      const easeInAmount = config.focusEaseIn / 100;
+      const easeOutAmount = config.focusEaseOut / 100;
+      let shaped;
+      if (linear <= 0.5) {
+        const half = linear * 2;
+        const easedHalf = focusEasingCurve(config.focusEasingType, half);
+        shaped = (half + (easedHalf - half) * easeInAmount) / 2;
+      } else {
+        const half = (linear - 0.5) * 2;
+        const easedHalf = 1 - focusEasingCurve(config.focusEasingType, 1 - half);
+        shaped = 0.5 + (half + (easedHalf - half) * easeOutAmount) / 2;
+      }
+      return linear + (shaped - linear) * (config.focusEasingAmount / 100);
+    }
+
+    function axisState(card) {
+      const sliders = card.querySelectorAll('input[type="range"]');
+      return {
+        tag: card.dataset.axis,
+        mode: card.querySelector(".mode-button").dataset.mode,
+        start: Number(sliders[0].value),
+        end: Number(sliders[1].value)
+      };
+    }
+
+    function getConfig() {
+      const fps = clamp(els.fps.value, 1, 60);
+      return {
+        message: els.message.value || " ",
+        alignment,
+        format: els.format.value,
+        textColor: els.textColor.value,
+        bgColor: els.bgColor.value,
+        fontSize: clamp(els.fontSize.value, 24, 600),
+        lineHeight: clamp(els.lineHeight.value, 0.5, 2),
+        padding: clamp(els.padding.value, 0, 400),
+        duration: clamp(els.duration.value, 1, 30),
+        fps,
+        motionFps: clamp(els.motionFps.value, 1, fps),
+        loops: Math.round(clamp(els.loops.value, 1, 20)),
+        staggerFrames: Math.round(clamp(els.staggerFrames.value, 0, 600)),
+        letterStaggerFrames: Math.round(clamp(els.letterStaggerFrames.value, 0, 600)),
+        letterChoreography: els.letterChoreography.value,
+        focusTravel: els.focusTravel.value,
+        focusRadius: clamp(els.focusRadius.value, 0, 40),
+        focusEasingType: els.focusEasingType.value,
+        focusEasingAmount: clamp(els.focusEasingAmount.value, 0, 100),
+        focusEaseIn: clamp(els.focusEaseIn.value, 0, 100),
+        focusEaseOut: clamp(els.focusEaseOut.value, 0, 100),
+        lines: els.message.value.split(/\r?\n/).map((text, index) => ({
+          text,
+          size: clamp(lineSizes[index] ?? els.fontSize.value, 24, 600)
+        })),
+        axes: Object.fromEntries(axisCards.map(card => {
+          const state = axisState(card);
+          return [state.tag, state];
+        }))
+      };
+    }
+
+    function splitGraphemes(text) {
+      if (typeof Intl.Segmenter === "function") {
+        const segmenter = new Intl.Segmenter(undefined, { granularity: "grapheme" });
+        return [...segmenter.segment(text)].map(part => part.segment);
+      }
+      return Array.from(text);
+    }
+
+    function progressForGlyph(config, progress, lineIndex, glyphIndex) {
+      const delayFrames = (lineIndex * config.staggerFrames) + (glyphIndex * config.letterStaggerFrames);
+      if (!delayFrames) return clamp(progress, 0, 1);
+      const delaySeconds = delayFrames / config.fps;
+      if (delaySeconds >= config.duration) return 0;
+      const loopSeconds = clamp(progress, 0, 1) * config.duration;
+      return clamp((loopSeconds - delaySeconds) / (config.duration - delaySeconds), 0, 1);
+    }
+
+    function focusLayout(config) {
+      if (focusLayoutCache.has(config)) return focusLayoutCache.get(config);
+      let visibleIndex = 0;
+      const indices = config.lines.map(line => splitGraphemes(line.text || "\u200b").map(character => {
+        if (/^\s$/u.test(character)) return Math.max(0, visibleIndex - 1);
+        const index = visibleIndex;
+        visibleIndex += 1;
+        return index;
+      }));
+      const layout = { indices, count: Math.max(1, visibleIndex) };
+      focusLayoutCache.set(config, layout);
+      return layout;
+    }
+
+    function focusInfluence(config, progress, lineIndex, glyphIndex) {
+      const layout = focusLayout(config);
+      const isReturnLeg = config.focusTravel === "pingpong" && progress > 0.5;
+      const legProgress = config.focusTravel === "pingpong"
+        ? (isReturnLeg ? (progress - 0.5) * 2 : progress * 2)
+        : progress;
+      const easedLeg = focusEasedLeg(config, legProgress);
+      const travelProgress = isReturnLeg ? 1 - easedLeg : easedLeg;
+      const focusPosition = travelProgress * Math.max(0, layout.count - 1);
+      const distance = Math.abs((layout.indices[lineIndex]?.[glyphIndex] ?? 0) - focusPosition);
+      return clamp(1 - distance / Math.max(1, config.focusRadius + 1), 0, 1);
+    }
+
+    function valuesAt(config, progress, lineIndex = 0, glyphIndex = 0) {
+      const glyphProgress = config.letterChoreography === "focus"
+        ? focusInfluence(config, progress, lineIndex, glyphIndex)
+        : progressForGlyph(config, progress, lineIndex, glyphIndex);
+      return Object.fromEntries(Object.entries(config.axes).map(([tag, axis]) => {
+        let phase = glyphProgress;
+        if (axis.mode === "pingpong" && config.letterChoreography !== "focus") {
+          phase = phase <= 0.5 ? phase * 2 : (1 - phase) * 2;
+        }
+        const value = axis.mode === "static"
+          ? axis.start
+          : axis.start + (axis.end - axis.start) * ease(phase);
+        return [tag, value];
+      }));
+    }
+
+    function heldProgress(config, elapsedSeconds) {
+      const heldSeconds = Math.floor((elapsedSeconds + 1e-9) * config.motionFps) / config.motionFps;
+      return (heldSeconds % config.duration) / config.duration;
+    }
+
+    function variationString(values) {
+      return Object.entries(values).map(([tag, value]) => `'${tag}' ${value.toFixed(3)}`).join(", ");
+    }
+
+    function resizePreview() {
+      const config = getConfig();
+      const format = FORMATS[config.format];
+      const rect = els.stage.getBoundingClientRect();
+      const scale = Math.min((rect.width - 40) / format.width, (rect.height - 40) / format.height, 1);
+      els.stageFrame.style.width = `${Math.max(1, format.width * scale)}px`;
+      els.stageFrame.style.height = `${Math.max(1, format.height * scale)}px`;
+      els.artboard.style.width = `${format.width}px`;
+      els.artboard.style.height = `${format.height}px`;
+      els.artboard.style.transform = `scale(${scale})`;
+      els.formatFlag.textContent = format.label;
+    }
+
+    function applyStaticPreview(config) {
+      const signature = JSON.stringify(config.lines);
+      if (signature !== previewLineSignature) {
+        const fragment = document.createDocumentFragment();
+        config.lines.forEach(line => {
+          const element = document.createElement("div");
+          element.className = "artboard-line";
+          splitGraphemes(line.text || "\u200b").forEach(character => {
+            const glyph = document.createElement("span");
+            glyph.className = "artboard-glyph";
+            glyph.textContent = character;
+            element.appendChild(glyph);
+          });
+          element.style.fontSize = `${line.size}px`;
+          fragment.appendChild(element);
+        });
+        els.previewText.replaceChildren(fragment);
+        previewLineSignature = signature;
+      }
+      els.previewText.style.color = config.textColor;
+      els.previewText.style.lineHeight = String(config.lineHeight);
+      els.previewText.style.padding = `${config.padding}px`;
+      els.previewText.style.textAlign = config.alignment;
+      els.previewText.style.textAlignLast = config.alignment === "justify" ? "left" : "auto";
+      [...els.previewText.children].forEach((line, index) => {
+        line.style.fontSize = `${config.lines[index].size}px`;
+        line.style.textAlign = config.alignment;
+        line.style.textAlignLast = config.alignment === "justify" ? "justify" : "auto";
+      });
+      els.artboard.style.backgroundColor = config.bgColor;
+    }
+
+    function updatePreviewFrame(progress) {
+      const config = getConfig();
+      applyStaticPreview(config);
+      [...els.previewText.children].forEach((line, index) => {
+        [...line.children].forEach((glyph, glyphIndex) => {
+          glyph.style.fontVariationSettings = variationString(valuesAt(config, progress, index, glyphIndex));
+        });
+      });
+      const values = valuesAt(config, progress, 0);
+      els.axisReadout.textContent = `S${String(activeStateIndex + 1).padStart(2, "0")} · ROTA ${values.ROTA.toFixed(0)} · FRWI ${values.FRWI.toFixed(0)}`;
+    }
+
+    function animationLoop(now) {
+      const config = getConfig();
+      if (isPlaying && !isExporting) {
+        const elapsed = (now - previewStart) / 1000;
+        pausedProgress = heldProgress(config, elapsed);
+        updatePreviewFrame(pausedProgress);
+      }
+      requestAnimationFrame(animationLoop);
+    }
+
+    function restartPreview() {
+      previewStart = performance.now();
+      pausedProgress = 0;
+      updatePreviewFrame(0);
+    }
+
+    function modeLabel(mode) {
+      return {
+        forward: "Mode: forward · click for ping-pong",
+        pingpong: "Mode: ping-pong · click for static",
+        static: "Mode: static · click for forward"
+      }[mode];
+    }
+
+    function stateFromConfig(config) {
+      return {
+        message: config.message,
+        alignment: config.alignment,
+        textColor: config.textColor,
+        bgColor: config.bgColor,
+        fontSize: config.fontSize,
+        lineHeight: config.lineHeight,
+        padding: config.padding,
+        duration: config.duration,
+        motionFps: config.motionFps,
+        staggerFrames: config.staggerFrames,
+        letterStaggerFrames: config.letterStaggerFrames,
+        letterChoreography: config.letterChoreography,
+        focusTravel: config.focusTravel,
+        focusRadius: config.focusRadius,
+        focusEasingType: config.focusEasingType,
+        focusEasingAmount: config.focusEasingAmount,
+        focusEaseIn: config.focusEaseIn,
+        focusEaseOut: config.focusEaseOut,
+        lineSizes: config.lines.map(line => line.size),
+        axes: structuredClone(config.axes)
+      };
+    }
+
+    function configFromState(state) {
+      const fps = clamp(els.fps.value, 1, 60);
+      const messageLines = state.message.split(/\r?\n/);
+      return {
+        ...structuredClone(state),
+        format: els.format.value,
+        fps,
+        loops: Math.round(clamp(els.loops.value, 1, 20)),
+        motionFps: clamp(state.motionFps, 1, fps),
+        lines: messageLines.map((text, index) => ({
+          text,
+          size: clamp(state.lineSizes[index] ?? state.fontSize, 24, 600)
+        }))
+      };
+    }
+
+    function saveProject() {
+      if (isHydratingState || !states.length) return;
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify({
+          version: 3,
+          activeStateIndex,
+          globals: {
+            format: els.format.value,
+            fps: clamp(els.fps.value, 1, 60),
+            loops: Math.round(clamp(els.loops.value, 1, 20))
+          },
+          states
+        }));
+      } catch (error) {
+        console.warn("Could not save the project locally.", error);
+      }
+    }
+
+    function restoreSavedProject(defaultState) {
+      try {
+        const rawProject = localStorage.getItem(STORAGE_KEY);
+        if (!rawProject) return false;
+        const savedProject = JSON.parse(rawProject);
+        if (!Array.isArray(savedProject.states) || !savedProject.states.length) return false;
+
+        states = savedProject.states.map(candidate => {
+          const state = { ...structuredClone(defaultState), ...candidate };
+          state.message = typeof candidate.message === "string" ? candidate.message : defaultState.message;
+          state.lineSizes = Array.isArray(candidate.lineSizes) && candidate.lineSizes.length
+            ? candidate.lineSizes
+            : [...defaultState.lineSizes];
+          state.letterChoreography = candidate.letterChoreography === "focus" ? "focus" : "cascade";
+          state.focusTravel = candidate.focusTravel === "pingpong" ? "pingpong" : "forward";
+          state.focusRadius = clamp(candidate.focusRadius ?? defaultState.focusRadius, 0, 40);
+          state.focusEasingType = ["linear", "quadratic", "cubic", "exponential"].includes(candidate.focusEasingType)
+            ? candidate.focusEasingType
+            : defaultState.focusEasingType;
+          state.focusEasingAmount = clamp(candidate.focusEasingAmount ?? defaultState.focusEasingAmount, 0, 100);
+          state.focusEaseIn = clamp(candidate.focusEaseIn ?? defaultState.focusEaseIn, 0, 100);
+          state.focusEaseOut = clamp(candidate.focusEaseOut ?? defaultState.focusEaseOut, 0, 100);
+          state.staggerFrames = Math.round(clamp(candidate.staggerFrames ?? 0, 0, 600));
+          state.letterStaggerFrames = Math.round(clamp(candidate.letterStaggerFrames ?? 0, 0, 600));
+          state.axes = Object.fromEntries(Object.entries(defaultState.axes).map(([tag, axis]) => [
+            tag,
+            { ...axis, ...(candidate.axes?.[tag] || {}) }
+          ]));
+          return state;
+        });
+
+        const globals = savedProject.globals || {};
+        if (FORMATS[globals.format]) els.format.value = globals.format;
+        if ([24, 30, 60].includes(Number(globals.fps))) els.fps.value = String(globals.fps);
+        els.loops.value = String(Math.round(clamp(globals.loops ?? els.loops.value, 1, 20)));
+        activeStateIndex = Math.round(clamp(savedProject.activeStateIndex ?? 0, 0, states.length - 1));
+        return true;
+      } catch (error) {
+        console.warn("Could not restore the locally saved project.", error);
+        return false;
+      }
+    }
+
+    function captureActiveState() {
+      if (isHydratingState || !states.length) return;
+      states[activeStateIndex] = stateFromConfig(getConfig());
+    }
+
+    function updateStateSummary() {
+      const sequenceDuration = states.reduce((total, state) => total + Number(state.duration || 0), 0);
+      els.stateSequenceSummary.textContent = `${states.length} ${states.length === 1 ? "state" : "states"} · ${sequenceDuration} sec sequence`;
+      els.deleteState.disabled = states.length === 1;
+    }
+
+    function renderStateTabs() {
+      const fragment = document.createDocumentFragment();
+      states.forEach((state, index) => {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.textContent = `S${String(index + 1).padStart(2, "0")}`;
+        button.title = state.message.split(/\r?\n/).filter(Boolean).join(" / ") || `State ${index + 1}`;
+        button.setAttribute("aria-pressed", String(index === activeStateIndex));
+        button.addEventListener("click", () => {
+          if (index === activeStateIndex) return;
+          captureActiveState();
+          activeStateIndex = index;
+          hydrateActiveState();
+        });
+        fragment.appendChild(button);
+      });
+      els.stateTabs.replaceChildren(fragment);
+      updateStateSummary();
+    }
+
+    function renderLineSizeRows() {
+      const lines = els.message.value.split(/\r?\n/);
+      const fragment = document.createDocumentFragment();
+      lines.forEach((text, index) => {
+        const row = document.createElement("div");
+        row.className = "line-size-row";
+
+        const number = document.createElement("span");
+        number.className = "line-size-index";
+        number.textContent = String(index + 1).padStart(2, "0");
+
+        const copy = document.createElement("span");
+        copy.className = "line-size-copy";
+        copy.textContent = text || "[blank line]";
+
+        const input = document.createElement("input");
+        input.type = "number";
+        input.min = "24";
+        input.max = "600";
+        input.step = "1";
+        input.value = String(lineSizes[index] ?? clamp(els.fontSize.value, 24, 600));
+        input.setAttribute("aria-label", `Line ${index + 1} size in pixels`);
+        input.addEventListener("input", () => {
+          lineSizes[index] = clamp(input.value, 24, 600);
+          refreshControls();
+        });
+
+        row.append(number, copy, input);
+        fragment.appendChild(row);
+      });
+      els.lineSizeRows.replaceChildren(fragment);
+    }
+
+    function syncLineSizesFromMessage(resetAll = false) {
+      const lines = els.message.value.split(/\r?\n/);
+      const defaultSize = clamp(els.fontSize.value, 24, 600);
+      lineSizes = lines.map((line, index) => resetAll ? defaultSize : (lineSizes[index] ?? defaultSize));
+      renderLineSizeRows();
+      previewLineSignature = "";
+    }
+
+    function hydrateActiveState() {
+      const state = states[activeStateIndex];
+      isHydratingState = true;
+      els.message.value = state.message;
+      alignment = state.alignment;
+      els.alignment.querySelectorAll("button").forEach(button => {
+        button.setAttribute("aria-pressed", String(button.dataset.align === alignment));
+      });
+      els.textColor.value = state.textColor;
+      els.bgColor.value = state.bgColor;
+      els.fontSize.value = String(state.fontSize);
+      els.lineHeight.value = String(state.lineHeight);
+      els.padding.value = String(state.padding);
+      els.duration.value = String(state.duration);
+      els.motionFps.value = String(state.motionFps);
+      els.staggerFrames.value = String(state.staggerFrames);
+      els.letterStaggerFrames.value = String(state.letterStaggerFrames);
+      els.letterChoreography.value = state.letterChoreography;
+      els.focusTravel.value = state.focusTravel;
+      els.focusRadius.value = String(state.focusRadius);
+      els.focusEasingType.value = state.focusEasingType;
+      els.focusEasingAmount.value = String(state.focusEasingAmount);
+      els.focusEaseIn.value = String(state.focusEaseIn);
+      els.focusEaseOut.value = String(state.focusEaseOut);
+      lineSizes = [...state.lineSizes];
+      axisCards.forEach(card => {
+        const axis = state.axes[card.dataset.axis];
+        const sliders = card.querySelectorAll('input[type="range"]');
+        sliders[0].value = String(axis.start);
+        sliders[1].value = String(axis.end);
+        const modeButton = card.querySelector(".mode-button");
+        modeButton.dataset.mode = axis.mode;
+        modeButton.textContent = modeLabel(axis.mode);
+        card.classList.toggle("is-static", axis.mode === "static");
+        sliders[1].disabled = axis.mode === "static";
+      });
+      renderLineSizeRows();
+      previewLineSignature = "";
+      isHydratingState = false;
+      refreshControls();
+      renderStateTabs();
+      restartPreview();
+    }
+
+    function refreshControls() {
+      captureActiveState();
+      const config = getConfig();
+      els.motionFps.max = String(config.fps);
+      els.motionFps.value = String(config.motionFps);
+      const choreographySummary = config.letterChoreography === "focus"
+        ? `focus ${config.focusTravel} / radius ${config.focusRadius}`
+        : `stagger L${config.staggerFrames}f / C${config.letterStaggerFrames}f`;
+      els.timingSummary.textContent = `state ${activeStateIndex + 1} · ${config.duration} sec · ${choreographySummary}`;
+      const isFocusSweep = config.letterChoreography === "focus";
+      els.focusTravel.disabled = !isFocusSweep;
+      els.focusRadius.disabled = !isFocusSweep;
+      els.focusEasingType.disabled = !isFocusSweep;
+      els.focusEasingAmount.disabled = !isFocusSweep;
+      els.focusEaseIn.disabled = !isFocusSweep;
+      els.focusEaseOut.disabled = !isFocusSweep;
+      els.staggerFrames.disabled = isFocusSweep;
+      els.letterStaggerFrames.disabled = isFocusSweep;
+      document.querySelector('output[for="textColor"]').textContent = config.textColor.toUpperCase();
+      document.querySelector('output[for="bgColor"]').textContent = config.bgColor.toUpperCase();
+      axisCards.forEach(card => {
+        card.querySelectorAll('input[type="range"]').forEach(slider => {
+          card.querySelector(`output[for="${slider.id}"]`).textContent = slider.value;
+        });
+      });
+      updatePreviewFrame(pausedProgress);
+      resizePreview();
+      updateStateSummary();
+      saveProject();
+    }
+
+    els.alignment.addEventListener("click", event => {
+      const button = event.target.closest("button[data-align]");
+      if (!button) return;
+      alignment = button.dataset.align;
+      els.alignment.querySelectorAll("button").forEach(item => {
+        item.setAttribute("aria-pressed", String(item === button));
+      });
+      refreshControls();
+    });
+
+    axisCards.forEach(card => {
+      const modeButton = card.querySelector(".mode-button");
+      const endSlider = card.querySelector(".end-row input");
+      modeButton.addEventListener("click", () => {
+        const nextMode = { forward: "pingpong", pingpong: "static", static: "forward" }[modeButton.dataset.mode];
+        modeButton.dataset.mode = nextMode;
+        modeButton.textContent = modeLabel(nextMode);
+        card.classList.toggle("is-static", nextMode === "static");
+        endSlider.disabled = nextMode === "static";
+        refreshControls();
+      });
+    });
+
+    els.message.addEventListener("input", () => {
+      syncLineSizesFromMessage(false);
+      refreshControls();
+      renderStateTabs();
+    });
+
+    els.fontSize.addEventListener("input", () => {
+      syncLineSizesFromMessage(true);
+      refreshControls();
+    });
+
+    [els.format, els.textColor, els.bgColor, els.lineHeight, els.padding, els.duration, els.fps, els.motionFps, els.loops, els.staggerFrames, els.letterStaggerFrames, els.letterChoreography, els.focusTravel, els.focusRadius, els.focusEasingType, els.focusEasingAmount, els.focusEaseIn, els.focusEaseOut, ...axisCards.flatMap(card => [...card.querySelectorAll("input")])]
+      .forEach(control => control.addEventListener("input", refreshControls));
+
+    els.addState.addEventListener("click", () => {
+      captureActiveState();
+      const current = getConfig();
+      const next = stateFromConfig(current);
+      next.message = "NEW STATE";
+      next.lineSizes = [current.fontSize];
+      states.splice(activeStateIndex + 1, 0, next);
+      activeStateIndex += 1;
+      hydrateActiveState();
+    });
+
+    els.duplicateState.addEventListener("click", () => {
+      captureActiveState();
+      states.splice(activeStateIndex + 1, 0, structuredClone(states[activeStateIndex]));
+      activeStateIndex += 1;
+      hydrateActiveState();
+    });
+
+    els.deleteState.addEventListener("click", () => {
+      if (states.length === 1) return;
+      states.splice(activeStateIndex, 1);
+      activeStateIndex = Math.min(activeStateIndex, states.length - 1);
+      hydrateActiveState();
+    });
+
+    els.playPause.addEventListener("click", () => {
+      isPlaying = !isPlaying;
+      els.playPause.textContent = isPlaying ? "Pause" : "Play";
+      if (isPlaying) previewStart = performance.now() - pausedProgress * getConfig().duration * 1000;
+    });
+
+    els.restart.addEventListener("click", restartPreview);
+    new ResizeObserver(resizePreview).observe(els.stage);
+
+    function escapeXml(value) {
+      return value.replace(/[<>&'\"]/g, character => ({
+        "<": "&lt;", ">": "&gt;", "&": "&amp;", "'": "&apos;", '"': "&quot;"
+      })[character]);
+    }
+
+    function svgForFrame(config, progress) {
+      const format = FORMATS[config.format];
+      const lineBoxes = config.lines.map(line => line.size * config.lineHeight);
+      const totalTextHeight = lineBoxes.reduce((total, height) => total + height, 0);
+      const availableWidth = Math.max(1, format.width - config.padding * 2);
+      let yCursor = (format.height - totalTextHeight) / 2;
+      const lines = config.lines.map((line, index) => {
+        const glyphs = splitGraphemes(line.text || "\u200b").map((character, glyphIndex) => {
+          const values = valuesAt(config, progress, index, glyphIndex);
+          return `<tspan style="font-variation-settings:${variationString(values)};">${escapeXml(character)}</tspan>`;
+        }).join("");
+        const lineCenter = yCursor + lineBoxes[index] / 2;
+        yCursor += lineBoxes[index];
+        const anchor = config.alignment === "right" ? "end" : config.alignment === "center" ? "middle" : "start";
+        const x = config.alignment === "right"
+          ? format.width - config.padding
+          : config.alignment === "center" ? format.width / 2 : config.padding;
+        const justify = config.alignment === "justify" && (line.text || "").trim()
+          ? ` textLength="${availableWidth}" lengthAdjust="spacing"`
+          : "";
+        return `<text x="${x}" y="${lineCenter}" font-size="${line.size}" text-anchor="${anchor}" dominant-baseline="central" xml:space="preserve"${justify}>${glyphs}</text>`;
+      }).join("");
+      return `<svg xmlns="http://www.w3.org/2000/svg" width="${format.width}" height="${format.height}" viewBox="0 0 ${format.width} ${format.height}">
+        <style>@font-face{font-family:DemonstratorExport;src:url('${FONT_DATA_URL}') format('woff2');font-weight:400;font-style:normal}text{font-family:DemonstratorExport,sans-serif;font-weight:400;font-style:normal;fill:${config.textColor};text-rendering:geometricPrecision}</style>
+        <rect width="100%" height="100%" fill="${config.bgColor}"/>
+        ${lines}
+      </svg>`;
+    }
+
+    async function drawFrame(context, config, progress) {
+      const format = FORMATS[config.format];
+      const svg = svgForFrame(config, progress);
+      const url = URL.createObjectURL(new Blob([svg], { type: "image/svg+xml;charset=utf-8" }));
+      try {
+        const image = new Image();
+        image.src = url;
+        await image.decode();
+        context.clearRect(0, 0, format.width, format.height);
+        context.drawImage(image, 0, 0, format.width, format.height);
+      } finally {
+        URL.revokeObjectURL(url);
+      }
+    }
+
+    function downloadBlob(blob, filename) {
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = filename;
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      setTimeout(() => URL.revokeObjectURL(url), 30000);
+    }
+
+    function exportFilename(settings) {
+      const stamp = new Date().toISOString().replace(/[-:]/g, "").replace(/T/, "-").slice(0, 15);
+      return `demonstrator-${settings.format}-${stamp}.mp4`;
+    }
+
+    function prepareExportCanvas(format) {
+      els.canvas.width = format.width;
+      els.canvas.height = format.height;
+      const context = els.canvas.getContext("2d", { alpha: false });
+      context.imageSmoothingEnabled = true;
+      context.imageSmoothingQuality = "high";
+      return context;
+    }
+
+    async function findH264Config(format, settings) {
+      const base = {
+        width: format.width,
+        height: format.height,
+        bitrate: format.bitrate,
+        framerate: settings.fps,
+        hardwareAcceleration: "prefer-hardware",
+        avc: { format: "avc" }
+      };
+      const level = settings.fps > 30 ? "2a" : "28";
+      for (const codec of [`avc1.4200${level}`, `avc1.4d40${level}`, `avc1.6400${level}`]) {
+        const result = await VideoEncoder.isConfigSupported({ ...base, codec });
+        if (result.supported) return result.config;
+      }
+      throw new Error("This browser does not expose an H.264 encoder.");
+    }
+
+    async function exportWithWebCodecs(configs, settings, context) {
+      if (typeof Mp4Muxer === "undefined") throw new Error("The local MP4 helper did not load.");
+      const format = FORMATS[settings.format];
+      const stateFrameCounts = configs.map(config => Math.max(2, Math.round(config.duration * settings.fps)));
+      const framesPerSequence = stateFrameCounts.reduce((total, count) => total + count, 0);
+      const totalFrames = framesPerSequence * settings.loops;
+      const encoderConfig = await findH264Config(format, settings);
+      const target = new Mp4Muxer.ArrayBufferTarget();
+      const muxer = new Mp4Muxer.Muxer({
+        target,
+        video: { codec: "avc", width: format.width, height: format.height, frameRate: settings.fps },
+        fastStart: "in-memory"
+      });
+      let encoderError = null;
+      const encoder = new VideoEncoder({
+        output: (chunk, metadata) => muxer.addVideoChunk(chunk, metadata),
+        error: error => { encoderError = error; }
+      });
+      encoder.configure(encoderConfig);
+
+      let globalIndex = 0;
+      for (let loopIndex = 0; loopIndex < settings.loops; loopIndex += 1) {
+        for (let stateIndex = 0; stateIndex < configs.length; stateIndex += 1) {
+          const config = configs[stateIndex];
+          const stateFrames = stateFrameCounts[stateIndex];
+          for (let localIndex = 0; localIndex < stateFrames; localIndex += 1) {
+            if (encoderError) throw encoderError;
+            const progress = heldProgress(config, localIndex / settings.fps);
+            await drawFrame(context, config, progress);
+            const frame = new VideoFrame(els.canvas, {
+              timestamp: Math.round(globalIndex * 1000000 / settings.fps),
+              duration: Math.round(1000000 / settings.fps)
+            });
+            encoder.encode(frame, { keyFrame: globalIndex === 0 || globalIndex % (settings.fps * 2) === 0 });
+            frame.close();
+            if (encoder.encodeQueueSize > 8) await encoder.flush();
+            if (globalIndex % Math.max(1, Math.round(settings.fps / 3)) === 0) {
+              const percent = Math.round((globalIndex + 1) / totalFrames * 100);
+              els.status.textContent = `Rendering MP4 · ${percent}% · state ${stateIndex + 1}/${configs.length} · loop ${loopIndex + 1}/${settings.loops}`;
+              await new Promise(resolve => setTimeout(resolve, 0));
+            }
+            globalIndex += 1;
+          }
+        }
+      }
+
+      await encoder.flush();
+      encoder.close();
+      if (encoderError) throw encoderError;
+      muxer.finalize();
+      return new Blob([target.buffer], { type: "video/mp4" });
+    }
+
+    async function exportWithNativeRecorder(configs, settings, context) {
+      if (typeof MediaRecorder === "undefined" || typeof els.canvas.captureStream !== "function") {
+        throw new Error("This browser does not provide an MP4-capable video encoder.");
+      }
+      await drawFrame(context, configs[0], 0);
+      try {
+        context.getImageData(0, 0, 1, 1);
+      } catch (error) {
+        throw new Error("The export renderer could not create an origin-clean frame.", { cause: error });
+      }
+      const mimeTypes = ["video/mp4;codecs=avc1.42E01E", "video/mp4;codecs=h264", "video/mp4"];
+      const mimeType = mimeTypes.find(type => MediaRecorder.isTypeSupported(type));
+      if (!mimeType) throw new Error("MP4 export needs a browser with WebCodecs/H.264 or native MP4 recording.");
+      const stream = els.canvas.captureStream(0);
+      const track = stream.getVideoTracks()[0];
+      const chunks = [];
+      const recorder = new MediaRecorder(stream, { mimeType, videoBitsPerSecond: FORMATS[settings.format].bitrate });
+      recorder.ondataavailable = event => { if (event.data.size) chunks.push(event.data); };
+      const stopped = new Promise((resolve, reject) => {
+        recorder.onstop = resolve;
+        recorder.onerror = () => reject(recorder.error || new Error("Native recorder failed."));
+      });
+      recorder.start();
+      const stateFrameCounts = configs.map(config => Math.max(2, Math.round(config.duration * settings.fps)));
+      const totalFrames = stateFrameCounts.reduce((total, count) => total + count, 0) * settings.loops;
+      let globalIndex = 0;
+      for (let loopIndex = 0; loopIndex < settings.loops; loopIndex += 1) {
+        for (let stateIndex = 0; stateIndex < configs.length; stateIndex += 1) {
+          const config = configs[stateIndex];
+          const stateFrames = stateFrameCounts[stateIndex];
+          for (let localIndex = 0; localIndex < stateFrames; localIndex += 1) {
+            await drawFrame(context, config, heldProgress(config, localIndex / settings.fps));
+            track.requestFrame();
+            globalIndex += 1;
+            els.status.textContent = `Recording MP4 · ${Math.round(globalIndex / totalFrames * 100)}% · state ${stateIndex + 1}/${configs.length}`;
+            await new Promise(resolve => setTimeout(resolve, 1000 / settings.fps));
+          }
+        }
+      }
+      recorder.stop();
+      await stopped;
+      track.stop();
+      return new Blob(chunks, { type: mimeType });
+    }
+
+    async function exportVideo() {
+      if (isExporting) return;
+      isExporting = true;
+      captureActiveState();
+      const settings = {
+        format: els.format.value,
+        fps: clamp(els.fps.value, 1, 60),
+        loops: Math.round(clamp(els.loops.value, 1, 20))
+      };
+      const configs = states.map(configFromState);
+      const sequenceDuration = configs.reduce((total, config) => total + config.duration, 0);
+      const totalDuration = sequenceDuration * settings.loops;
+      const currentConfig = getConfig();
+      const format = FORMATS[settings.format];
+      let context = prepareExportCanvas(format);
+      els.exportButton.disabled = true;
+      els.exportButton.textContent = "Building MP4…";
+      els.status.textContent = `Preparing ${format.width} × ${format.height} · ${configs.length} ${configs.length === 1 ? "state" : "states"} · ${settings.loops} ${settings.loops === 1 ? "loop" : "loops"}…`;
+
+      try {
+        await document.fonts.ready;
+        let blob;
+        if (typeof VideoEncoder !== "undefined" && typeof VideoFrame !== "undefined") {
+          try {
+            blob = await exportWithWebCodecs(configs, settings, context);
+          } catch (webCodecsError) {
+            console.warn("WebCodecs export unavailable; trying native MP4 recording.", webCodecsError);
+            els.status.textContent = "H.264 encoder unavailable · trying native MP4 recorder…";
+            context = prepareExportCanvas(format);
+            blob = await exportWithNativeRecorder(configs, settings, context);
+          }
+        } else {
+          blob = await exportWithNativeRecorder(configs, settings, context);
+        }
+        downloadBlob(blob, exportFilename(settings));
+        els.status.textContent = `Complete · ${totalDuration} sec · ${(blob.size / 1048576).toFixed(1)} MB MP4 downloaded`;
+      } catch (error) {
+        console.error(error);
+        els.status.textContent = `Export stopped · ${error.message}`;
+      } finally {
+        isExporting = false;
+        els.exportButton.disabled = false;
+        els.exportButton.textContent = "Export H.264 MP4";
+        previewStart = performance.now() - pausedProgress * currentConfig.duration * 1000;
+      }
+    }
+
+    els.exportButton.addEventListener("click", exportVideo);
+    syncLineSizesFromMessage(false);
+    const defaultState = stateFromConfig(getConfig());
+    if (restoreSavedProject(defaultState)) {
+      hydrateActiveState();
+    } else {
+      states = [defaultState];
+      renderStateTabs();
+    }
+    document.fonts.ready.then(() => {
+      refreshControls();
+      restartPreview();
+    });
+    requestAnimationFrame(animationLoop);
+  </script>
+</body>
+</html>

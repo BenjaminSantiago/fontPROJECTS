@@ -5,12 +5,12 @@ import math
 # SETTINGS
 # -------------------------
 
-UFO_PATH = "TEST__compREDISTRIBUTE_Regular.ufo"     # <-- change this
-SOURCE_GLYPH = "s"            # curve glyph
-COMPONENT_GLYPH = "dingus"       # glyph to distribute
-TARGET_GLYPH = "S_decorated"  # output glyph
-SPACING = 30                 # distance between components
-SUBDIVISIONS = 40             # curve resolution (higher = smoother)
+UFO_PATH        = "TEST__compREDISTRIBUTE_Regular.ufo"  # <-- change this
+SOURCE_GLYPH    = "s"                                   # curve glyph
+COMPONENT_GLYPH = "dingus"                              # glyph to distribute
+TARGET_GLYPH    = "S_decorated"                         # output glyph
+SPACING         = 30                                    # distance between components
+SUBDIVISIONS    = 40                                    # curve resolution (higher = smoother)
 
 # -------------------------
 # LOAD FONT
